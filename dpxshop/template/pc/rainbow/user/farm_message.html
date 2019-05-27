@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>农场中心</title>
+		<link rel="stylesheet" type="text/css" href="__STATIC__/css/tpshop.css" />
+		<link rel="stylesheet" type="text/css" href="__STATIC__/css/myaccount.css" />
+
+  <!-- Chang URLs to wherever Video.js files will be hosted -->
+  <link href="__STATIC__/video-js/video-js.css" rel="stylesheet" type="text/css">
+  <!-- video.js must be in the <head> for older IEs to work. -->
+  <script src="__STATIC__/video-js/video.js"></script>
+
+  <!-- Unless using the CDN hosted version, update the URL to the Flash SWF -->
+  <script>
+    videojs.options.flash.swf = "__STATIC__/video-js/video-js.swf";
+  </script>
+		<script src="__STATIC__/js/jquery-1.11.3.min.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body class="bg-f5">
+	<include file="user/header"/>
+	<div class="home-index-middle">
+		<div class="w1224">
+			<div class="g-crumbs">
+				<a href="{:U('Home/User/index')}">我的商城</a>
+				<i class="litt-xyb"></i>
+				<span>我的农场</span>
+			</div>
+			<div class="home-main">
+				<include file="user/menu"/>
+				<div class="ri-menu fr">
+					<div class="menumain p">
+						<div class="goodpiece">
+							<h1>农场信息</h1>
+							<!--<a href=""><span class="co_blue">帮助</span></a>-->
+						</div>
+						<div class="orderbook-list returnmagament">
+							
+							
+							<div class="returngoods" style="margin-top:20px; font-size:20px;line-height:2em;">
+								欢迎进入大棚侠农家蔬菜联盟监控系统，如果您想实时查看监控内容，<a style="color:red" href="http://192.168.1.64/">请点击这里</a>
+								</br>
+								需要账号，密码才可以登录，如果您有什么问题可以联系我们！
+                           
+						    </div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--footer-s-->
+	<div class="footer p"><include file="public/footer_index" /> </div>
+	<!--footer-e-->
+	
+	</body>
+</html>

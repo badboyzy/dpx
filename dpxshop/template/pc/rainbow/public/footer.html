@@ -1,0 +1,76 @@
+<div class="footer p">
+      <div class="wochu-desc">
+            <div class="wochu-info">
+                <ul>
+                    <li>
+                        <i><img alt="" src="__STATIC__/images/qqcg.png"></i>
+                        <div class="wochu-msg">
+                            <div class="msg-name">放心品牌</div>
+                            <div class="msg-desc">大棚侠蔬菜联盟工程</div>
+                        </div>
+                    </li>
+                    <li>
+                        <i><img alt="" src="__STATIC__/images/zycf.png"></i>
+                        <div class="wochu-msg">
+                            <div class="msg-name">放心品质</div>
+                            <div class="msg-desc">自检检验室，保证食品安全</div>
+                        </div>
+                    </li>
+                    <li>
+                        <i><img alt="" src="__STATIC__/images/llbx.png"></i>
+                        <div class="wochu-msg">
+                            <div class="msg-name">放心物流</div>
+                            <div class="msg-desc">冷链配送，用户自主选择配送日期</div>
+                        </div>
+                    </li>
+                    <li>
+                        <i><img alt="" src="__STATIC__/images/pzbz.png"></i>
+                        <div class="wochu-msg">
+                            <div class="msg-name">放心服务</div>
+                            <div class="msg-desc">7*24小时服务，用户体验至上</div>
+                        </div>
+                    </li>
+               </ul>
+            </div>
+        </div>
+    <div class="w1224">
+        <div class="footer-ewmcode">
+		    <div class="foot-list-fl">
+		        <tpshop sql="select * from `__PREFIX__article_cat` where parent_id = 2" key="k" item='v'>
+		            <ul>
+		                <li class="foot-th">
+		                    {$v[cat_name]}
+		                </li>
+		                <tpshop sql="select * from `__PREFIX__article` where cat_id = $v[cat_id]  and is_open=1" key="k2" item='v2'>
+		                    <li>
+		                        <a href="{:U('Home/Article/detail',array('article_id'=>$v2[article_id]))}">{$v2[title]}</a>
+		                    </li>
+		                </tpshop>
+		            </ul>
+		        </tpshop>
+		    </div>
+		    <div class="QRcode-fr">
+		        <ul>
+		            <li class="foot-th">客户端</li>
+		            <li><img src="__STATIC__/images/wei.jpg"/></li>
+		        </ul>
+		        <ul>
+		            <li class="foot-th">微信</li>
+		            <li><img src="__STATIC__/images/wei.jpg"/></li>
+		        </ul>
+		    </div>
+		</div>
+		<div class="mod_copyright p">
+		    <div class="grid-top">
+		        <tpshop sql="select * from `__PREFIX__article` where cat_id = 5 and is_open=1" key="k" item='v'>
+		            <a href="{:U('Home/Article/detail',array('article_id'=>$v[article_id]))}">{$v[title]}</a>
+		            <span>|</span>
+		        </tpshop>
+		        <a href="javascript:void (0);">客服热线:{$tpshop_config['shop_info_phone']}</a>
+		    </div>
+		    <p>Copyright © 2017-2025 大棚侠农家蔬菜联盟 版权所有 保留一切权利 备案号:辽12345678号</p>
+		
+		  
+		</div>
+    </div>
+</div>

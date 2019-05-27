@@ -1,0 +1,71 @@
+<link rel="stylesheet" type="text/css" href="__STATIC__/css/common.css"/>
+
+       <div class="banner">
+        <ul id="service_icons">
+            <li class="icons" id="icon_01">
+                <img src="__STATIC__/images/icon_vertical.png" alt="">
+
+                <h3 style="font-size: 16px; color: #289031;">全球精选</h3>
+                <span>一站式生鲜农产品批发</span>
+            </li>
+            <li class="icons" id="icon_02">
+                <img src="__STATIC__/images/icon_vertical.png" alt="">
+
+                <h3 style="font-size: 16px; color: #289031;">源头直采</h3>
+                <span>精选优质好食材</span>
+            </li>
+            <li class="icons" id="icon_03">
+                <img src="__STATIC__/images/icon_vertical.png" alt="">
+
+                <h3 style="font-size: 16px; color: #289031;">优质服务</h3>
+                <span>全心全意的为您服务</span>
+            </li>
+            <li class="icons" id="icon_04">
+                <img src="__STATIC__/images/icon_vertical.png" alt="">
+
+                <h3 style="font-size: 16px; color: #289031;">安全保证</h3>
+                <span>健全的检疫检测机构</span>
+            </li>
+        </ul>
+    </div>
+   
+<div class="w1224">
+    <div class="footer-ewmcode">
+        <div class="foot-list-fl">
+            <tpshop sql="select * from `__PREFIX__article_cat` where parent_id = 2" key="k" item='v'>
+                <ul>
+                    <li class="foot-th">
+                        {$v[cat_name]}
+                    </li>
+                    <tpshop sql="select * from `__PREFIX__article` where cat_id = $v[cat_id]  and is_open=1" key="k2" item='v2'>
+                        <li>
+                            <a href="{:U('Home/Article/detail',array('article_id'=>$v2[article_id]))}">{$v2[title]}</a>
+                        </li>
+                    </tpshop>
+                </ul>
+            </tpshop>
+        </div>
+        <div class="QRcode-fr">
+            <ul>
+                <li class="foot-th">客户端</li>
+                <li><img src="__STATIC__/images/wei.jpg"/></li>
+            </ul>
+            <ul>
+                <li class="foot-th">微信</li>
+                <li><img src="__STATIC__/images/wei.jpg"/></li>
+            </ul>
+        </div>
+    </div>
+    <div class="mod_copyright p">
+        <div class="grid-top">
+            <tpshop sql="select * from `__PREFIX__article` where cat_id = 5 and is_open=1" key="k" item='v'>
+                <a href="{:U('Home/Article/detail',array('article_id'=>$v[article_id]))}">{$v[title]}</a>
+                <span>|</span>
+            </tpshop>
+            <a href="javascript:void (0);">客服热线:{$tpshop_config['shop_info_phone']}</a>
+        </div>
+        <p>Copyright © 2017-2025 大棚侠农家蔬菜联盟 版权所有 保留一切权利 备案号:辽12345678号</p>
+
+       
+    </div>
+</div>

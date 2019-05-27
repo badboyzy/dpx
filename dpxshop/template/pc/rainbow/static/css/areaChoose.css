@@ -1,0 +1,82 @@
+.clearfix:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+.clearfix {
+  *zoom: 1;
+}
+.area_choose {
+  display: none;
+  position: absolute;
+  width: 478px;
+  background: #fff;
+  margin: 0;
+  padding: 0;
+  border: 1px solid #ccc;
+  padding-top: 5px;
+}
+.area_choose * {
+  margin: 0;
+  padding: 0;
+}
+.area_choose ul {
+  list-style: none;
+}
+.area_choose .area_choose_title {
+  padding: 0;
+  width: 458px;
+  margin: auto;
+  border-bottom: 2px solid #42BCEB;
+}
+.area_choose .area_choose_title li {
+  float: left;
+  width: 93px;
+  height: 34px;
+  line-height: 34px;
+  text-align: center;
+  cursor: pointer;
+}
+.area_choose .area_choose_title li.active {
+  background: #42BCEB;
+  color: #fff;
+}
+.area_choose .area_choose_title li.btn-cancel {
+  float: right;
+  width: 20px;
+  height: 20px;
+  line-height: 20px;
+  margin-top: 6px;
+  color: #42BCEB;
+  text-align: center;
+  border-radius: 2px;
+  cursor: pointer;
+  font-size: 18px;
+}
+.area_choose .area_choose_content {
+  padding-bottom: 10px;
+}
+.area_choose .area_choose_content span {
+  width: 83px;
+  height: 35px;
+  float: left;
+  background-color: #f5f5f5;
+  color: #666;
+  margin-left: 10px;
+  margin-top: 10px;
+  line-height: 35px;
+  text-align: center;
+  font-size: 13px;
+  overflow: hidden;
+  cursor: pointer;
+}
+.area_choose .area_choose_content span:hover {
+  color: #fff;
+  background-color: #56b4f8;
+}
+.area_choose .area_choose_content span.active {
+  color: #fff;
+  background-color: #56b4f8;
+}

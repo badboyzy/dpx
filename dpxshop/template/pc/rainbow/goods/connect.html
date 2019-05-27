@@ -1,0 +1,703 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0030)http://bbs.360.cn/forumall.php -->
+<html xmlns="http://www.w3.org/1999/xhtml"><!--teser code @ 8080--><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta http-equiv="X-UA-Compatible" content="IE=EmulateIE1">            <title>论坛</title>
+    
+
+<meta name="generator" content="Discuz! X3.1">
+<meta name="MSSmartTagsPreventParsing" content="True">
+<meta http-equiv="MSThemeCompatible" content="Yes">
+ <link rel="stylesheet" type="text/css" href="__STATIC__/css/tpshop.css" />
+         <link rel="stylesheet" type="text/css" href="__STATIC__/css/common.css" />
+        <script src="__STATIC__/js/jquery-1.11.3.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="__PUBLIC__/js/global.js"></script>
+        <script src="__PUBLIC__/js/pc_common.js"></script>
+<!--<base href="http://bbs.360.cn/">--><base href=".">
+<link rel="stylesheet" type="text/css" href="__STATIC__/css/style_4_common.css">
+<link rel="stylesheet" type="text/css" href="__STATIC__/css/style_4_dfsj_index_forumdisplay.css">
+<script type="text/javascript">var STYLEID = '4', STATICURL = 'https://b1.qikucdn.com/static/', IMGDIR = 'https://b1.qikucdn.com/static/image/common/', VERHASH = 'ftR', charset = 'utf-8', discuz_uid = '0', cookiepre = 'yTGF__b9c2_', cookiedomain = '.bbs.360.cn', cookiepath = '/', showusercard = '1', attackevasive = '0', disallowfloat = 'newthread', creditnotice = '1|金币|,2|经验|', defaultstyle = '', REPORTURL = 'aHR0cDovL2Jicy4zNjAuY24vZm9ydW1hbGwucGhw', SITEURL = 'http://bbs.360.cn/', JSPATH = 'https://b1.qikucdn.com/static/js/', DYNAMICURL = '';</script>
+  
+
+
+                <script>
+            function mySayGood (e) {
+            	var x = e.clientX;
+            	var y = e.clientY;
+                var countObj = jq('#myZanCountsSpan');
+                jq.ajax({
+                    url:'apkapi/quotation.php',
+                    type:"post",
+                    dataType:"json",
+                    data:{op:'saygood'},
+                    success:function (msg) {
+                        if (msg.rs==='success'){
+                            countObj.html(parseInt(countObj.html())+1);
+                        }else{
+                        	alerts.show(msg.info,x,y);
+                            alerts.hide();
+                        }
+                    }
+                });
+            }
+            
+            var alerts = new Object();
+            alerts.id = "alterts_"+parseInt(1000*Math.random());
+            alerts.show = function (str,x,y) {
+            	var div=document.createElement('div');
+                div.id = this.id;
+                div.style.position =  "absolute"; //position: absolute;
+                div.style.top=(y-40)+"px";
+                div.style.left=(x+5)+"px";
+                div.style.background="#fff";
+                div.style.padding="5px 10px";
+                div.style.boxShadow="2px 2px 5px rgba(0,0,0,0.3)"; //box-shadow: 10px 10px 5px #888888;
+                div.style.borderRadius="5px";
+                
+                div.innerHTML = str;
+                document.body.appendChild(div);
+            }
+            alerts.hide = function () {
+                setTimeout(function(){
+                    jq("#"+alerts.id).hide(500,function(){
+                        document.body.removeChild(document.getElementById(alerts.id));
+                    });
+                },2000);
+            }
+            var coolyunAttachment = '1'=='1' ? "yes" : "no";
+            var coolyunS0 = 'file.coolyun.com';
+            var coolyunS1 = 'd1.coolyun.com';
+var coolyunS2 = 'file.c.qikucdn.com';
+        </script>
+        
+</head>
+
+<body id="nv_dfsj_index" class="pg_forumdisplay" onkeydown="if(event.keyCode==27) return false;">
+   <include file="public/header" w='w1224'/>
+
+<div id="wp" class="wp">
+
+<style id="diy_style" type="text/css"></style>
+
+<div class="wp">
+<!--[diy=diy1]--><div id="diy1" class="area"></div><!--[/diy]-->
+</div>
+<div class="boardnav xm_index mtm">
+<div id="ct" class="wp cl ct2 xm_ct2 detailframe">
+<div class="mn xm_mn">
+ <div class="xm_index_info">
+<div class="xm_index_info_dec">
+今日: 3410<span class="pipe">|</span>
+昨日: 16132<span class="pipe">|</span>
+帖子: 19794317<span class="pipe">|</span>
+<!-- 360fans: 32456089<span class="pipe">|</span> -->
+欢迎<a href="" target="_blank" class="xi2" style="padding-left: 4px;">CP17101001</a>
+</div>
+</div>
+
+<div id="threadlist" class="tl">
+<div class="th sortlist">
+        <div class="y forumlistsort">
+            <a href="" class="xi2" style="font-weight: 400;">全部</a>
+            <span class="pipe">|</span>
+            <a href="" class="xi2">热门</a>
+            <span class="pipe">|</span>
+            <a href="" class="xi2">精华</a>&nbsp;&nbsp;
+<!-- <span id="atarget" onclick="setatarget(-1)" class="y atarget_1" title="在新窗口中打开帖子">新窗</span> -->
+        </div>
+
+        <span class="showmenu_outer">
+            <a id="filter_orderby" href="javascript:;" class="showmenu " onclick="showMenu(this.id)">
+                                最后发表
+                            </a>
+        </span>
+</div>
+<div class="cl">				
+<table summary="forum_0" cellspacing="0" cellpadding="0" id="threadlisttableid"><tbody id="stickthread_15187881">
+<tr>
+<th class="common">
+<div class="avatarbox">
+<a href="" c="1" class="avatar" mid="card_5578"><img src="__STATIC__/images/ccc/1.jpg"></a>
+</div>
+
+<div class="tl_ct">
+<a href="javascript:;" style="font-weight: bold;color: #EE1B2E;" target="_blank" class="s xst">大棚侠农家蔬菜联盟：我们是这样除虫的！</a>
+
+<img src="__STATIC__/images/ccc/011.small.gif" alt="新人帖" align="absmiddle">
+
+<div class="info">
+<a href="" class="y replies">
+29</a>
+<a href="" class="y viewnum">
+1161</a>
+
+<span>
+<a href="" c="1" style="color: #009900;" mid="card_5578">Geevii</a></span>
+
+<span>| <span>2017-9-28 11:36</span> | <a href="" target="_blank" class="xg1">快视频</a></span>
+
+
+<!-- <em>最后回复 <a href="http://bbs.360.cn/forum.php?mod=redirect&tid=15187881&goto=lastpost#lastpost">2017-10-17 03:59</a></em> -->
+<a href="http://bbs.360.cn/forum.php?mod=viewthread&amp;tid=15187881&amp;extra=" target="_blank" class="totop">
+置顶</a>
+</div>
+</div>
+</th>
+</tr>
+</tbody>
+<tbody id="stickthread_15204840">
+<tr>
+<th class="common">
+<div class="avatarbox">
+<a href="" c="1" class="avatar" mid="card_2010"><img src="__STATIC__/images/ccc/2.jpg"></a>
+</div>
+
+<div class="tl_ct">
+<a href="javascript:;" style="font-weight: bold;color: #EE1B2E;" target="_blank" class="s xst">各类果蔬20种病的诊断方法！实用干货，快进来看看</a>
+
+<img src="__STATIC__/images/ccc/008.small.gif" alt="版主推荐" align="absmiddle">
+<img src="__STATIC__/images/ccc/picture.png" alt="attach_img" title="图片附件" align="absmiddle">
+
+<div class="info">
+<a href="" class="y replies">
+12</a>
+<a href="" class="y viewnum">
+894</a>
+
+<span>
+<a href="" c="1" style="color: #009900;" mid="card_2010">飞机飞行</a></span>
+
+<span>| <span>2017-10-15 15:58</span> | <a href="" target="_blank" class="xg1">360动态</a></span>
+
+
+<!-- <em>最后回复 <a href="http://bbs.360.cn/forum.php?mod=redirect&tid=15204840&goto=lastpost#lastpost">2017-10-17 00:24</a></em> -->
+<a href="" target="_blank" class="totop">
+置顶</a>
+</div>
+</div>
+</th>
+</tr>
+</tbody>
+<tbody id="stickthread_15100420">
+<tr>
+<th class="common">
+<div class="avatarbox">
+<a href="" mid="card_1204"><img src="__STATIC__/images/ccc/3.jpg"></a>
+</div>
+
+<div class="tl_ct">
+<a href="javascript:;" style="font-weight: bold;color: #EE5023;" target="_blank" class="s xst">归去来兮，诗意栖居的大棚侠农家蔬菜联盟………
+</a>
+
+<img src="__STATIC__/images/ccc/common.gif" alt="attachment" title="附件" align="absmiddle">
+<img src="__STATIC__/images/ccc/best.png" align="absmiddle" alt="digest" title="精华 1">
+
+<div class="info">
+<a href="" class="y replies">
+29</a>
+<a href="" class="y viewnum">
+4614</a>
+
+<span>
+<a href="" c="1" style="color: #0000FF;" mid="card_1204">坏孩子的天空</a><a href="" target="_blank"><img src="__STATIC__/images/ccc/t01519dfdd6d784ea54.png" class="vm" alt="VIP认证" title="VIP认证"></a></span>
+
+<span>| <span>2017-7-26 08:48</span> | <a href="" target="_blank" class="xg1">360清理大师</a></span>
+
+
+<!-- <em>最后回复 <a href="http://bbs.360.cn/forum.php?mod=redirect&tid=15100420&goto=lastpost#lastpost">2017-10-16 20:46</a></em> -->
+<a href="" target="_blank" class="totop">
+置顶</a>
+</div>
+</div>
+</th>
+</tr>
+</tbody>
+<tbody id="stickthread_15185451">
+<tr>
+<th class="common">
+<div class="avatarbox">
+<a href="" c="1" class="avatar" mid="card_8503"><img src="__STATIC__/images/ccc/5.jpg"></a>
+</div>
+
+<div class="tl_ct">
+<a href="javascript:;" style="color: #EE1B2E;" target="_blank" class="s xst">十一游玩——大棚侠农家乐为您提供旅游胜地</a>
+
+<img src="__STATIC__/images/ccc/picture.png" alt="attach_img" title="图片附件" align="absmiddle">
+
+<div class="info">
+<a href="" class="y replies">
+939</a>
+<a href="" class="y viewnum">
+27516</a>
+
+<span>
+<a href="" c="1" style="color: #0000FF;" mid="card_8503">晓兔兔12138</a></span>
+
+<span>| <span>2017-9-26 15:27</span> | <a href="" target="_blank" class="xg1">OS综合讨论区</a></span>
+
+
+<!-- <em>最后回复 <a href="http://bbs.360.cn/forum.php?mod=redirect&tid=15185451&goto=lastpost#lastpost">2017-10-16 16:02</a></em> -->
+<a href="" target="_blank" class="totop">
+置顶</a>
+</div>
+</div>
+</th>
+</tr>
+</tbody>
+<tbody id="stickthread_15191197">
+<tr>
+<th class="common">
+<div class="avatarbox">
+<a href="" c="1" class="avatar" mid="card_9191"><img src="__STATIC__/images/ccc/4.jpg"></a>
+</div>
+
+<div class="tl_ct">
+<a href="javascript:;" style="font-weight: bold;color: #8F2A90;" target="_blank" class="s xst">“大棚侠”农家蔬菜联盟小分队开始招募啦！！！</a>
+
+<img src="__STATIC__/images/ccc/008.small.gif" alt="版主推荐" align="absmiddle">
+<img src="__STATIC__/images/ccc/picture.png" alt="attach_img" title="图片附件" align="absmiddle">
+
+<div class="info">
+<a href="" class="y replies">
+8</a>
+<a href="" class="y viewnum">
+505</a>
+
+<span>
+<a href="" c="1" mid="card_9191">17区魏国戰神</a></span>
+
+<span>| <span>2017-10-1 10:58</span> | <a href="" target="_blank" class="xg1">大国战</a></span>
+
+
+<!-- <em>最后回复 <a href="http://bbs.360.cn/forum.php?mod=redirect&tid=15191197&goto=lastpost#lastpost">2017-10-16 14:27</a></em> -->
+<a href="" target="_blank" class="totop">
+置顶</a>
+</div>
+</div>
+</th>
+</tr>
+</tbody>
+<tbody id="stickthread_15184982">
+<tr>
+<th class="common">
+<div class="avatarbox">
+<a href="" c="1" class="avatar" mid="card_4665"><img src="__STATIC__/images/ccc/2.jpg"></a>
+</div>
+
+<div class="tl_ct">
+<a href="javascript:;" style="font-weight: bold;color: #2897C5;" target="_blank" class="s xst">今年冬天的大萝卜真心不错！！！一咬一包水儿啊！等着吃完了再来20斤！兄弟姐妹们别和我抢啊</a>
+
+<img src="__STATIC__/images/ccc/011.small.gif" alt="新人帖" align="absmiddle">
+<img src="__STATIC__/images/ccc/common.gif" alt="attachment" title="附件" align="absmiddle">
+
+<div class="info">
+<a href="" class="y replies">
+11</a>
+<a href="" class="y viewnum">
+1297</a>
+
+<span>
+<a href="" c="1" mid="card_4665">天下人知</a></span>
+
+<span>| <span>2017-9-25 22:59</span> | <a href="" target="_blank" class="xg1">360校园</a></span>
+
+
+<!-- <em>最后回复 <a href="http://bbs.360.cn/forum.php?mod=redirect&tid=15184982&goto=lastpost#lastpost">2017-10-16 12:32</a></em> -->
+<a href="" target="_blank" class="totop">
+置顶</a>
+</div>
+</div>
+</th>
+</tr>
+</tbody>
+<tbody id="stickthread_15203895">
+<tr>
+<th class="common">
+<div class="avatarbox">
+<a href="" c="1" class="avatar" mid="card_5790"><img src="__STATIC__/images/ccc/5.jpg"></a>
+</div>
+
+<div class="tl_ct">
+<a href="javascript:;" target="_blank" class="s xst">2017-10-17大棚侠群贴吧开通！欢迎亲们来加入，共同建设“大鹏侠”农机蔬菜联盟群。
+</a>
+
+<img src="__STATIC__/images/ccc/picture.png" alt="attach_img" title="图片附件" align="absmiddle">
+
+<div class="info">
+<a href="" class="y replies">
+2</a>
+<a href="" class="y viewnum">
+354</a>
+
+<span>
+<a href="" c="1" mid="card_5790">3粉6粉0</a></span>
+
+<span>| <span>2017-10-14 15:48</span> | <a href="" target="_blank" class="xg1">360行车记录仪</a></span>
+
+
+<!-- <em>最后回复 <a href="http://bbs.360.cn/forum.php?mod=redirect&tid=15203895&goto=lastpost#lastpost">2017-10-16 10:24</a></em> -->
+<a href="" target="_blank" class="totop">
+置顶</a>
+</div>
+</div>
+</th>
+</tr>
+</tbody>
+<tbody id="stickthread_15185640">
+<tr>
+<th class="common">
+<div class="avatarbox">
+<a href="" c="1" class="avatar" mid="card_6538"><img src="__STATIC__/images/ccc/4.jpg"></a>
+</div>
+
+<div class="tl_ct">
+<a href="javascript:;" target="_blank" class="s xst">找营养蔬菜，让你一次了解个够，营养蔬菜大曝光！
+</a>
+
+<img src="__STATIC__/images/ccc/002.small.gif" alt="热帖" align="absmiddle">
+<img src="__STATIC__/images/ccc/common.gif" alt="attachment" title="附件" align="absmiddle">
+
+<div class="info">
+<a href="" class="y replies">
+44</a>
+<a href="" class="y viewnum">
+5151</a>
+
+<span>
+<a href="" c="1" mid="card_6538">浮世绘368</a><a href="" target="_blank"><img src="__STATIC__/images/ccc/t01519dfdd6d784ea54.png" class="vm" alt="VIP认证" title="VIP认证"></a></span>
+
+<span>| <span>2017-9-26 13:36</span> | <a href="" target="_blank" class="xg1">360手机N4</a></span>
+
+
+<!-- <em>最后回复 <a href="http://bbs.360.cn/forum.php?mod=redirect&tid=15185640&goto=lastpost#lastpost">2017-10-15 11:03</a></em> -->
+<a href="" target="_blank" class="totop">
+置顶</a>
+</div>
+</div>
+</th>
+</tr>
+</tbody>
+<tbody id="stickthread_15173587">
+<tr>
+<th class="common">
+<div class="avatarbox">
+<a href="" c="1" class="avatar" mid="card_7722"><img src="__STATIC__/images/ccc/3.jpg"></a>
+</div>
+
+<div class="tl_ct">
+<a href="javascript:;" style="font-weight: bold;color: #8F2A90;" target="_blank" class="s xst">2017-9-26【活动】美味可口菜谱征集。</a>
+
+<img src="__STATIC__/images/ccc/best.png" align="absmiddle" alt="digest" title="精华 1">
+
+<div class="info">
+<a href="" class="y replies">
+12</a>
+<a href="" class="y viewnum">
+14331</a>
+
+<span>
+<a href="" c="1" style="color: #009900;" mid="card_7722">iTyou.ltd</a></span>
+
+<span>| <span>2017-9-15 14:36</span> | <a href="" target="_blank" class="xg1">360安全路由</a></span>
+
+
+<!-- <em>最后回复 <a href="http://bbs.360.cn/thread-15173587-1-1.html">2017-10-14 17:43</a></em> -->
+<a href="" target="_blank" class="totop">
+置顶</a>
+</div>
+</div>
+</th>
+</tr>
+</tbody>
+<tbody id="stickthread_15190526">
+<tr>
+<th class="common">
+<div class="avatarbox">
+<a href="" c="1" class="avatar" mid="card_5764"><img src="__STATIC__/images/ccc/2.jpg"></a>
+</div>
+
+<div class="tl_ct">
+<a href="javascript:;" style="font-weight: bold;color: #EE1B2E;" target="_blank" class="s xst">【活动】折扣卡领取中，满足你的胃口。</a>
+
+<img src="__STATIC__/images/ccc/common.gif" alt="attachment" title="附件" align="absmiddle">
+
+<div class="info">
+<a href="" class="y replies">
+7</a>
+<a href="" class="y viewnum">
+643</a>
+
+<span>
+<a href="" c="1" style="color: #FF0000;" mid="card_5764">360校园俱乐部</a></span>
+
+<span>| <span>2017-9-30 17:11</span> | <a href="" target="_blank" class="xg1">360校园</a></span>
+
+
+<!-- <em>最后回复 <a href="http://bbs.360.cn/forum.php?mod=redirect&tid=15190526&goto=lastpost#lastpost">2017-10-14 17:42</a></em> -->
+<a href="javascript:;" target="_blank" class="totop">
+置顶</a>
+</div>
+</div>
+</th>
+</tr>
+</tbody>
+
+<a href="javascript:;" target="_blank" class="totop">
+</a>
+</div>
+</div>
+</th>
+</tr>
+</tbody>
+<tbody id="normalthread_15205928">
+<tr>
+
+</table>
+</div>
+</div>
+
+<div class="bm bw0 pgs cl">
+<span class="pgb"><a href="javascript:;">返&nbsp;回</a></span>
+<span id="fd_page_bottom"><div class="pg"><strong>1</strong><a href="javascript:;">2</a><a href="javascript:;">3</a><a href="javascript:;">4</a><a href="javascript:;">5</a><a href="javascript:;">6</a><a href="javascript:;" class="last">... 21</a><label><input type="text" name="custompage" class="px" size="2" title="输入页码，按回车快速跳转" value="1" onkeydown="if(event.keyCode==13) {window.location=&#39;forumall.php?page=&#39;+this.value;; doane(event);}"><span title="共 21 页"> / 21 页</span></label><a href="javascript:;" class="nxt">下一页</a></div></span>
+</div>
+
+</div>
+<div class="sd xm_sd"><div id="portal_block_232" class="block move-span"><div id="portal_block_232_content" class="dxb_bc"><div class="portal_block_summary"><div class="posting">
+<a href="javascript:;" onclick="showbindmobile()">
+发帖
+  
+</a>
+</div></div></div></div><script src="" type="text/javascript"></script><div id="portal_block_234" class="block move-span"><div id="portal_block_234_content" class="dxb_bc"><div class="portal_block_summary"><div class="time-signups">
+<div class="right-time">
+<p class="right-week">星期二</p>
+<p class="right-day">10.17</p>
+<p class="right-signnum">已签到<span class="right-signnums">2942</span>人</p>
+</div>
+<div class="right-signups lucky-link">
+<a class="sign-link lucky-links" href="javascript:;" style="margin-bottom: 6px;">
+签到
+</a>
+<a href="javascript:;" class="lucky-links" target="_blank">
+抽奖
+</a>
+
+</div>
+</div></div></div></div><div id="portal_block_235" class="block move-span"><div id="portal_block_235_content" class="dxb_bc"></div></div> <div id="portal_block_237" class="block move-span"><div id="portal_block_237_content" class="dxb_bc"><div class="module cl ml newestact"><h4 class="newestact-title">最新活动</h4>
+
+
+<div class="newestact_focus">
+		<div class="col topCol" style="width: 270px"><a href="" target="_blank" title="老周邀您参加360公司2017年度感恩用户节！" style="display: inline;"><em></em><img src="__STATIC__/images/ccc/t017e008307cc7c7279.png" width="270" height="152" alt="老周邀您参加360公司2017年度感恩用户节！"></a><ul style="display: none;">
+<li class="now"> </li>
+</ul>
+		<ul><li class="now"></li></ul></div>
+	</div>
+
+</div></div></div><div id="portal_block_283" class="block move-span"><div id="portal_block_283_content" class="dxb_bc"><div class="editorChoice box hot-posts-pannel">
+        <h4>
+			<strong>热门推荐</strong>  <!--<span class="hot-posts posts-selected">热门推荐</span><span class="new-posts">最新主帖</span>-->     
+		</h4>
+        <ul><li><a href="javascript:;" target="_blank" title="你好，vizza小镇蓝！">【活动】折扣卡领取中，满足你的胃口。</a></li><li>
+        <a href="javascript:;" target="_blank" title="浪漫穿越时空！一大波360公司第五届集体婚">“大棚侠”农家蔬菜联盟小分队开始招募啦！！！
+</a></li><li><a href="javascript:;" target="_blank" title="忻州警方携手360为4000学生开讲金融安全">2017-10-17大棚侠群贴吧开通！欢迎亲们来加入，共同建设“大鹏侠”农机蔬菜联盟群。</a></li><li><a href="javascript:;" target="_blank" title="【喜讯】360入选商务部“中国之造”！">2017-9-26【活动】美味可口菜谱征集。
+</a></li><li><a href="javascript:;" target="_blank" title="【丹东游记】十一国庆丹东游记，思密达~">十一游玩——大棚侠农家乐为您提供旅游胜地
+</a></li><li>
+        <a href="javascript:;" target="_blank" title="加强版双私密系统，真假难辨，让360手机viz">各类果蔬20种病的诊断方法！实用干货，快进来看看
+</a></li><li>
+</div>
+</div></div><div id="portal_block_282" class="block move-span"><div id="portal_block_282_content" class="dxb_bc"><div class="editorChoice box new-posts-pannel">
+        <h4>
+			<strong>内容推荐</strong>  <span class="hot-posts">热门推荐</span><span class="new-posts">最新主帖</span>     
+		</h4>
+        <ul></ul>
+</div>
+</div></div> <div id="portal_block_239" class="block move-span"><div id="portal_block_239_content" class="dxb_bc"><div class="portal_block_summary"></div></div></div><div id="portal_block_240" class="block move-span"><div id="portal_block_240_content" class="dxb_bc"><div class="activitynum box">
+<h4>明星用户</h4>
+<ul><li class="activitynum-list">
+	<a href="" c="1" target="_blank" mid="card_5339"><img src="__STATIC__/images/ccc/1.jpg" width="48" height="48" alt="芒果小洛"></a>
+	<p class="activitynum-name"><a href="" title="芒果小洛" target="_blank">芒果小洛</a></p>
+</li><li class="activitynum-list">
+	<a href="h" c="1" target="_blank" mid="card_2317"><img src="__STATIC__/images/ccc/2.jpg" width="48" height="48" alt="360chr"></a>
+	<p class="activitynum-name"><a href="" title="360chr" target="_blank">360chr</a></p>
+</li><li class="activitynum-list">
+	<a href="" c="1" target="_blank" mid="card_3780"><img src="__STATIC__/images/ccc/3.jpg" width="48" height="48" alt="十年@"></a>
+	<p class="activitynum-name"><a href="" title="十年@" target="_blank">十年@</a></p>
+</li><li class="activitynum-list">
+	<a href="" c="1" target="_blank" mid="card_2738"><img src="__STATIC__/images/ccc/4.jpg" width="48" height="48" alt="兔先生"></a>
+	<p class="activitynum-name"><a href="" title="兔先生" target="_blank">兔先生</a></p>
+</li><li class="activitynum-list">
+	<a href="" c="1" target="_blank" mid="card_6611"><img src="__STATIC__/images/ccc/5.jpg" width="48" height="48" alt="wyqwyq7723"></a>
+	<p class="activitynum-name"><a href="" title="wyqwyq7723" target="_blank">wyqwyq7723</a></p>
+</li><li class="activitynum-list">
+	<a href="" c="1" target="_blank" mid="card_3580"><img src="__STATIC__/images/ccc/2.jpg" width="48" height="48" alt="喵星人."></a>
+	<p class="activitynum-name"><a href="" title="喵星人." target="_blank">喵星人.</a></p>
+</li></ul>
+<div style="clear:both;"></div>
+</div></div></div><div id="portal_block_241" class="block move-span"><div id="portal_block_241_content" class="dxb_bc"><div class="portal_block_summary"><div class="bm xm_bm" style="margin-bottom:0;">
+				<div class="download box"><h4>大棚侠社区客户端下载</h4></div>
+				<div class="bm_c">
+					<table width="100%" border="0">
+						<tbody><tr>
+							<td align="center"><img src="__STATIC__/images/ccc/wei.jpg" width="240" height="240"></td>
+						</tr>
+						
+					</tbody></table>
+				</div>
+			</div></div></div></div><div id="portal_block_242" class="block move-span"><div id="portal_block_242_content" class="dxb_bc"><div class="portal_block_summary"><!--<div class="bm xm_bm">
+		        <div class="focusus box">
+		            <h4>关注我们</h4>
+		        </div>
+		        <div class="bm_c">
+		            <div class="focusus-img">
+		                <img src="http://b.qikucdn.com/dfsj_imgs/weixin_bbs.png?v=1.1" width="105" height="105">
+		                <img src="http://b.qikucdn.com/dfsj_imgs/weixin_360OS.jpg" width="105" height="105">
+		            </div>
+		            <div class="focusus-share">
+		            	<a href="http://weibo.com/qikushequ?is_all=1" target="_blank"> <img src="http://b.qikucdn.com/dfsj_imgs/indeximg/weibo_weibo.png?v=1.1" alt="">360手机社区</a>
+		            	<a href="http://weibo.com/qiku360os?is_all=1" target="_blank"> <img src="http://b.qikucdn.com/dfsj_imgs/indeximg/weibo_weibo.png?v=1.1" alt="">360 OS</a>
+		            </div>
+		        </div>
+			</div>--></div></div></div><div class="drag">
+<!--[diy=diy2]--><div id="diy2" class="area"></div><!--[/diy]-->
+</div>
+</div>
+</div>
+</div>
+
+
+<div id="filter_special_menu" class="p_pop" style="display:none" change="location.href=&#39;forumall.php?mod=forumdisplay&amp;fid=0&amp;filter=&#39;+$(&#39;filter_special&#39;).value">
+<ul>
+<li><a href="http://bbs.360.cn/forumall.php?mod=forumdisplay&amp;fid=0">全部主题</a></li>
+</ul>
+</div>
+<div id="filter_reward_menu" class="p_pop" style="display:none" change="forumall.php?mod=forumdisplay&amp;fid=0&amp;filter=specialtype&amp;specialtype=reward&amp;rewardtype=&#39;+$(&#39;filter_reward&#39;).value">
+<ul>
+<li><a href="http://bbs.360.cn/forumall.php?mod=forumdisplay&amp;fid=0&amp;filter=specialtype&amp;specialtype=reward">全部悬赏</a></li>
+</ul>
+</div>
+<div id="filter_dateline_menu" class="p_pop" style="display:none">
+<ul class="pop_moremenu">
+<li>排序: 
+<a href="http://bbs.360.cn/forumall.php?mod=forumdisplay&amp;fid=0&amp;filter=author&amp;orderby=dateline">发帖时间</a><span class="pipe">|</span>
+<a href="http://bbs.360.cn/forumall.php?mod=forumdisplay&amp;fid=0&amp;filter=reply&amp;orderby=replies">回复/查看</a><span class="pipe">|</span>
+<a href="http://bbs.360.cn/forumall.php?mod=forumdisplay&amp;fid=0&amp;filter=reply&amp;orderby=views">查看</a>
+</li>
+<li>时间: 
+<a href="http://bbs.360.cn/forumall.php?mod=forumdisplay&amp;fid=0&amp;orderby=lastpost&amp;filter=dateline" class="xw1">全部时间</a><span class="pipe">|</span>
+<a href="http://bbs.360.cn/forumall.php?mod=forumdisplay&amp;fid=0&amp;orderby=lastpost&amp;filter=dateline&amp;dateline=86400">一天</a><span class="pipe">|</span>
+<a href="http://bbs.360.cn/forumall.php?mod=forumdisplay&amp;fid=0&amp;orderby=lastpost&amp;filter=dateline&amp;dateline=172800">两天</a><span class="pipe">|</span>
+<a href="http://bbs.360.cn/forumall.php?mod=forumdisplay&amp;fid=0&amp;orderby=lastpost&amp;filter=dateline&amp;dateline=604800">一周</a><span class="pipe">|</span>
+<a href="http://bbs.360.cn/forumall.php?mod=forumdisplay&amp;fid=0&amp;orderby=lastpost&amp;filter=dateline&amp;dateline=2592000">一个月</a><span class="pipe">|</span>
+<a href="http://bbs.360.cn/forumall.php?mod=forumdisplay&amp;fid=0&amp;orderby=lastpost&amp;filter=dateline&amp;dateline=7948800">三个月</a>
+</li>
+</ul>
+</div>
+
+    <div id="filter_time_menu" class="p_pop" style="display:none">
+        <ul>
+            <li><a href="http://bbs.360.cn/forumall.php?mod=forumdisplay&amp;fid=0&amp;orderby=lastpost&amp;filter=dateline">全部时间</a></li>
+            <li><a href="http://bbs.360.cn/forumall.php?mod=forumdisplay&amp;fid=0&amp;orderby=lastpost&amp;filter=dateline&amp;dateline=86400">一天</a></li>
+            <li><a href="http://bbs.360.cn/forumall.php?mod=forumdisplay&amp;fid=0&amp;orderby=lastpost&amp;filter=dateline&amp;dateline=172800">两天</a></li>
+            <li><a href="http://bbs.360.cn/forumall.php?mod=forumdisplay&amp;fid=0&amp;orderby=lastpost&amp;filter=dateline&amp;dateline=604800">一周</a></li>
+            <li><a href="http://bbs.360.cn/forumall.php?mod=forumdisplay&amp;fid=0&amp;orderby=lastpost&amp;filter=dateline&amp;dateline=2592000">一个月</a></li>
+            <li><a href="http://bbs.360.cn/forumall.php?mod=forumdisplay&amp;fid=0&amp;orderby=lastpost&amp;filter=dateline&amp;dateline=7948800">三个月</a></li>
+        </ul>
+    </div>
+
+<div id="filter_orderby_menu" class="p_pop" style="display:none">
+<ul>
+<li><a href="http://bbs.360.cn/forumall.php?mod=forumdisplay&amp;fid=0">默认排序</a></li>
+<li><a href="http://bbs.360.cn/forumall.php?mod=forumdisplay&amp;fid=0&amp;filter=author&amp;orderby=dateline">发帖时间</a></li>
+<li><a href="http://bbs.360.cn/forumall.php?mod=forumdisplay&amp;fid=0&amp;filter=reply&amp;orderby=replies">回复/查看</a></li>
+<li><a href="http://bbs.360.cn/forumall.php?mod=forumdisplay&amp;fid=0&amp;filter=reply&amp;orderby=views">查看</a></li>
+<li><a href="http://bbs.360.cn/forumall.php?mod=forumdisplay&amp;fid=0&amp;filter=lastpost&amp;orderby=lastpost">最后发表</a></li>
+<li><a href="http://bbs.360.cn/forumall.php?mod=forumdisplay&amp;fid=0&amp;filter=heat&amp;orderby=heats">热门</a></li>
+<li><a href="http://bbs.360.cn/forumall.php?mod=forumdisplay&amp;fid=0&amp;filter=reply&amp;orderby=unreply">抢沙发</a></li>
+</ul>
+</div>
+
+<input type="hidden" value="00" id="signup">
+<script type="text/javascript">
+var dfsj_jq = jQuery.noConflict();
+
+    var getpagenum=parseInt(dfsj_jq("#signup").attr("value"));
+    if(getpagenum){
+        dfsj_jq(".sign-link").text("已签到");
+    }
+
+    dfsj_jq(".right-signnums").text(2942);
+    dfsj_jq(".xm_nav>span:eq(1)>a").css("color","#2ec7bb");
+
+    dfsj_jq(".stable-box").click(function(){
+        dfsj_jq(".stable-box").css("color","#2ec7bb").css("border-bottom","1px solid #2ec7bb");
+        dfsj_jq(".test-box").css("color","#3c3c3c").css("border-bottom","none");
+        dfsj_jq(".update-test").hide();
+        dfsj_jq(".update-stable").show();
+    });
+
+    dfsj_jq(".test-box").click(function(){
+        dfsj_jq(".test-box").css("color","#2ec7bb").css("border-bottom","1px solid #2ec7bb");
+        dfsj_jq(".stable-box").css("color","#3c3c3c").css("border-bottom","none");
+        dfsj_jq(".update-stable").hide();
+        dfsj_jq(".update-test").show();
+    });
+
+    var week; 
+    var d = new Date();
+    var day = d.getDay();
+    if(day==0) week="星期日";
+    if(day==1) week="星期一";
+    if(day==2) week="星期二";
+    if(day==3) week="星期三";
+    if(day==4) week="星期四";
+    if(day==5) week="星期五";
+    if(day==6) week="星期六";
+
+    var vMon = d.getMonth() + 1;
+    var vDay = d.getDate();
+    var days=vMon+"."+vDay;
+    dfsj_jq(".right-week").text(week);
+    dfsj_jq(".right-day").text(days);
+    dfsj_jq(".right-signnums").text(2942);
+    
+</script>
+</div>
+            
+                        
+
+ 
+<script>
+monitor.setProject('QH_82_1').getTrack().getClickAndKeydown().getClickHeatmap(10, 1);
+</script>                            
+    
+    
+ 
+<script type="text/javascript">_attachEvent(window, 'scroll', function () { showTopLink(); });checkBlind();</script>
+			<div id="discuz_tips" style="display:none;"></div>
+			<script type="text/javascript">
+				var tipsinfo = '25595882|X3.1|0.6||0||0|7|1508197144|69b10da51b4ae5aff221daab4a3388af|2';
+			</script>
+		<script type="text/javascript">
+            jq(function(){
+                // adjust height
+                var win_h = jq(window).height(), 
+                    body_h = jq(document.body).height();
+                if(body_h < win_h) {
+                    jq("#wp").height( jq("#wp").height() + (win_h-body_h) );
+                }
+                document.querySelector('.xm_footer .footer-now-year').innerText = new Date().getFullYear();
+            });
+</script>
+
+ <div style="clear:both;"></div>
+		<div class="adv" style="display:none;">
+		<a href="" style="background:url() center center;"></a></div>
+         <!--footer-s-->
+        <div class="footer p"style="margin-top:50px;">
+             <include file="public/footer_index" />
+            <include file="public/sidebar_cart" />
+        </div>
+        <!--footer-e-->
+		<script src="js/headerfooter.js" type="text/javascript" charset="utf-8"></script>
+ 
+
+</body></html>

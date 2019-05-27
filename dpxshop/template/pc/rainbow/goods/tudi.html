@@ -1,0 +1,1211 @@
+<!DOCTYPE html>
+<!-- saved from url=(0043)http://dihe.cn/supply/adddetail?land_use=16 -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="renderer" content="webkit">
+<title>发布土地</title>
+<link rel="stylesheet" href="__STATIC__/css/font-awesome.min.css" type="text/css">
+<!-- Bootstrap core CSS -->
+<link rel="shortcut icon" href="http://dihe.cn/favicon.ico">
+<link rel="bookmark" href="http://dihe.cn/favicon.ico">
+ <link rel="stylesheet" type="text/css" href="__STATIC__/css/tpshop.css" />
+  <link rel="stylesheet" type="text/css" href="__STATIC__/css/common.css" />
+<link rel="stylesheet" href="__STATIC__/css/bootstrap.min.css" type="text/css">
+<link rel="stylesheet" href="__STATIC__/css/style.min.css" type="text/css">
+<link rel="stylesheet" href="__STATIC__/css/supply.list.css" type="text/css">
+<link rel="stylesheet" href="__STATIC__/css/header.css" type="text/css">
+ <link rel="stylesheet" href="__STATIC__/css/tinyImgUpload.css">
+<script charset="UTF-8" src="__STATIC__/js/uba.min.js"></script>
+<script type="text/javascript" async="" src="__STATIC__/js/vds.js"></script>
+<script charset="utf-8" src="__STATIC__/js/v.js"></script>
+<script charset="UTF-8" src="__STATIC__/js/QiMoIMSDK.js"></script>
+<script src="__STATIC__/js/push.js"></script>
+<script src="__STATIC__/js/hm.js"></script>
+<script charset="UTF-8" src="__STATIC__/js/json2.js"></script>
+<script type="text/javascript" src="__STATIC__/js/jquery-2.1.1.min.js"></script>
+<script type="text/javascript" src="__STATIC__/js/jquery.SuperSlide.2.1.1.min.js"></script>
+<script type="text/javascript" src="__STATIC__/js/lazy.min.js"></script>
+<script type="text/javascript" src="__STATIC__/js/jsAddresss.js"></script>
+<link type="text/css" rel="stylesheet" href="__STATIC__/css/chatStyle.css">
+ <script src="__STATIC__/js/jquery-1.11.3.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="__PUBLIC__/js/global.js"></script>
+        <script src="__PUBLIC__/js/pc_common.js"></script>
+ 
+  
+</head>
+
+<body>
+      <include file="public/header" w='w1224'/>
+   
+<link rel="stylesheet" href="__STATIC__/css/manage.min.css" type="text/css">
+<link rel="stylesheet" href="__STATIC__/css/areaChoose.css" type="text/css">
+<form id="supply_form" method="post" action="http://dihe.cn/supply/add">
+    <div class="t_blockj_box">
+        <div class="margin-top30"></div>
+        
+        <div class="block_box_br border-none">
+            <div class="infor_box_lf">
+                <div class="block_bar block_bar_line clear">
+                    <div class="block_bar_title width-137">
+                        <span>*</span>选择土地类别：
+                    </div>
+                  
+                      <div class="form-group">
+                         <label class="sr-only" for="tudi">tudi</label>
+                        <select class="form-control" id="kinds" name="kinds">
+                        	<option>-请选择-</option>
+							<option>菜地</option>
+							<option>果园</option>
+							<option>有机大棚</option>
+                        </select> 
+             </div>   
+                       
+                </div>
+                <!--            <div class="block_bar clear">
+                <div class="block_bar_title">用途标签</div>
+                <div class="block_bar_rt">
+                    <div class="block_bar_p">
+                        <b> {$info.land_use_tags}
+                        </b> <a href="/supply/addcategory">重新选择</a>
+                    </div>
+                </div>
+            </div>-->
+                <div class="block_bar margin-top40 clear">
+                    <div class="block_bar_title width-90 margin-top8">
+                        <span>*</span>流转方式
+                    </div>
+                    <div class="block_bar_rt input_style">
+                        <div class="block_bar_type consult_hide active">
+                            <input type="radio" name="transfer" value="1" class="block_input" checked="checked">转让
+                        </div>
+                        <div class="block_bar_type consult_hide">
+                            <input type="radio" name="transfer" value="2" class="block_input">出租
+                        </div>
+                        <div class="block_bar_type consult_hide">
+                            <input type="radio" name="transfer" value="3" class="block_input">转包
+                        </div>
+                       
+                        <div class="clear"></div>
+                    </div>
+                </div>
+                <div class="block_bar margin-top40 clear">
+                    <div class="block_bar_title width-90 margin-top8">
+                        <span>*</span>土地面积
+                    </div>
+                    <div class="block_bar_rt">
+                        <input class="block_ass_input" id="Area_mu" value="" name="area">
+                                                <input type="hidden" value="亩" name="area_unit">
+                        <div class="block_bar_postion">提示：1平方米约等于0.0015亩，1公顷等于15亩</div>
+                        <div class="block_ass_tt">亩</div>
+                                                <div class="block_area_button" id="block_area_change">面积转换器</div>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="block_bar_tip" id="tip_mj">请输入大于0的正确面积</div>
+                </div>
+                <div class="block_bar margin-top50 clear">
+                    <div class="block_bar_title width-90 margin-top8">
+                        <span>*</span>可流转年限
+                    </div>
+                    <div class="block_bar_rt">
+                        <input class="block_ass_input" name="remaining_year" value="" id="ass_input">
+                        <div class="block_ass_tt">年</div>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="block_bar_tip" id="tip_nx">请输入正确的年限且年限不能大于70年</div>
+                </div>
+                <div class="block_bar margin-top20 clear">
+                    <div class="block_bar_title width-90 margin-top8">
+                        <span>*</span>所在地区
+                    </div>
+                    <div class="block_bar_rt input_adr">
+                   
+             <div class="form-group">
+                         <label class="sr-only" for="province1">Province</label>
+                        <select class="form-control" id="cmbProvince" name="cmbProvince"></select> 
+             </div>   
+              <div class="form-group">
+              <label class="sr-only" for="city1">City</label>          
+                        <select class="form-control" id="cmbCity" name="cmbCity" ></select>  
+               </div>
+                <div class="form-group">
+                <label class="sr-only" for="district1">District</label>        
+                        <select class="form-control" id="cmbArea" name="cmbArea"></select>  
+                       </div>
+  
+               <script type="text/javascript">  
+                    addressInit('cmbProvince', 'cmbCity', 'cmbArea');  
+               </script>  
+                    </div>
+                </div>
+                <div class="block_bar margin-top20 clear">
+                    <div class="block_bar_title width-90 margin-top8">详细地址</div>
+                    <div class="block_bar_rt">
+                        <input id="block_ass_in" class="width-580" value="" name="address">
+                    </div>
+                </div>
+                <div class="block_bar margin-top40 clear">
+                    <div class="block_bar_title width-90 margin-top12">地图标注</div>
+                    <div class="block_bar_rt">
+                        <div class="block_ass_inp pointer">
+                            <div class="inp_img">
+                                <img width="100%" src="__STATIC__/images/zudi/zb.png">
+                            </div>
+                            <input name="gcj_lng" id="lng" type="hidden" placeholder="经度" value=""> <input name="gcj_lat" id="lat" type="hidden" placeholder="纬度" value=""> <input name="coordinates" type="hidden" value="">
+                            <div class="inp_title _googleMap">标记坐标</div>
+                            <div class="clear"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="block_bar margin-top20 block_hide">
+                    <div class="block_bar_title width-90 margin-top8">转让费</div>
+                    <div class="block_bar_rt">
+                        <input type="text" id="block_prop" class="block_ass_input" name="transfer_fee" value="">
+                        <div class="block_ass_tt">万元</div>
+                        <div class="block_ass_img" id="block_ass_bg">
+                            <input type="checkbox" id="price" class="block_ass_opcity" name="mianyi" value="1">
+                        </div>
+                        <div class="block_ass_my">
+                            <label for="price">价格面议</label>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="block_bar_tip" id="tip_zrf">请输入数字金额</div>
+                    <div class="clear"></div>
+                </div>
+                <div class="block_bar margin-top20 block_hide">
+                    <div class="block_bar_title width-90 margin-top8">租金</div>
+                    <div class="block_bar_rt">
+                        <input type="text" id="input_prop" class="block_ass_input" name="rent_fee" value="">
+                                                <div class="block_bar_postion">提示：请填写每亩每年的租金</div>
+                        <div class="block_ass_tt">元/亩/年</div>
+                        <div class="block_ass_tt">
+                            总租金<span id="wyuan_year">0</span>万元/年
+                        </div>
+                                                <div class="clear"></div>
+                    </div>
+                    <div class="block_bar_tip" id="tip_zj">请输入数字金额</div>
+                    <div class="clear"></div>
+                </div>
+                <div class="block_bar fy_show clear">
+                    <div class="block_bar_title width-90">费用</div>
+                    <div class="block_bar_rt">
+                        <div class="block_bar_p">面议</div>
+                    </div>
+                </div>
+                
+                
+                
+                
+                <div class="block_bar margin-top50 clear">
+                    <div class="block_bar_title width-90 margin-top8">
+                        <span>*</span>信息标题
+                    </div>
+                    <div class="block_bar_rt">
+                        <input type="text" name="title" value="" class="width-580" id="block_ass_in">
+                    </div>
+                </div>
+                <div class="block_bar margin-top20 clear" id="aa">
+                    <div class="block_bar_title width-90 margin-top8">
+                        <span>*</span>土地照片
+                    </div>
+                    <div class="block_bar_rt width-580">
+                        <div class="photo_tt">
+                            最多可上传10张照片，图片每张最大6M。支持jpg、png、gif格式<br> <span>上传照片土地出售速度快3倍！</span>
+                        </div>
+                     
+                            <!-- <div class="photo_list_img">
+                                <img width="100%" src="http://files.a13.com/file/show-i348074-n348074.jpg">
+                                <div class="photo_list_img_del">
+                                    <img src="/static/pc/images/two_merge/del.png" alt="">
+                                </div>
+                                <div class="photo_list_img_setcover  photo_list_img_cover">
+                                    设为封面
+                                </div>
+                                <div class="photo_list_img_coverok photo_list_img_cover">
+                                    封面
+                                </div>
+                            </div> -->
+                             <div id="upload">
+
+                              </div>
+                           
+                    </div>
+                </div>
+                  
+       
+        
+
+<script src="__STATIC__/js/tinyImgUpload.js"></script>
+<script>
+document.documentElement.style.fontSize = document.documentElement.clientWidth*0.1+'px';
+
+var options = {
+    path: '/',
+    onSuccess: function (res) {
+        console.log(res);
+    },
+    onFailure: function (res) {
+        console.log(res);
+    }
+}
+
+var upload = tinyImgUpload('#upload', options);
+document.getElementsByClassName('submit')[0].onclick = function (e) {
+    upload();
+}
+</script>
+                <div class="block_bar margin-top20 clear">
+                    <div class="block_bar_title width-90 margin-top8">描述详情</div>
+                    <div class="block_bar_rt">
+                        <textarea name="content" id="block_ass_in" class="block_ass_height" style="display: none;" placeholder="可输入土地详情说明，如：土地状态、价值说明等等"></textarea>
+                        <div class="block_ass_height width-580" id="block_ass_in_text" placeholder="可输入土地详情说明，如：土地状态、价值说明等等" contenteditable="true"></div>
+                        <div id="placeholder1">可输入土地详情说明，如：土地状态、价值说明等等</div>
+                        <div class="des_details">
+                            <div class="des_details_tt">
+                                如何填写描述
+                                <div class="des_tt_help">
+                                    <img width="100%" src="__STATIC__/images/zudi/help.png">
+                                </div>
+                                <div class="type_rt_hover">
+                                    <div class="type_rt_hover_top"></div>
+                                    <div class="type_rt_hover_bottom">
+                                        <p>全国转让</p>
+                                        <p>面积：123平方米</p>
+                                        <p>可流转年限：12年</p>
+                                        <p>转让费：12万元</p>
+                                        <p>租金：12元/平方米/年</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="des_details_bt pointer" id="shengcheng">自动生成</div>
+                            <div class="clear"></div>
+                        </div>
+                    </div>
+                    <div class="block_bar_tip" id="tip_mg">红色语句为敏感词</div>
+                    <div class="clear"></div>
+                </div>
+                <div class="blockj_type blockj_hide">
+                    <div class="blockj_type_tltle">
+                        <span><b>自定义标签</b> <br>（可多选）</span>
+                        <div class="blockj_type_tp"></div>
+                    </div>
+                    <div class="blockj_type_rrt margin-top20 mal20">
+                        <div class="pub_rt_top">
+                            <div class="inline land_use_tagsWrap">
+                                <input type="text" class="width-580" name="" value="" id="supply_land_building_tag" placeholder="手动输入 ..."> <input type="hidden" name="land_use" value="16"> <input type="hidden" name="land_use_tags" value="">
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                        <div class="div_land_use_tags clearfix">
+                                                        <div class="tags11">
+                                果树
+                                <div class="tags11_del">
+                                    <img src="__STATIC__/images/zudi/del.png" alt="">
+                                </div>
+                            </div>
+                                                    </div>
+                        <div class="pub_rt_bottom">注：根据土地特点填写关键词，关键词越多，越容易被其他用户搜索到。</div>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                <div class="margin-top50"></div>
+            </div>
+            <div class="infor_warp" id="suspension" style="position: absolute; top: 23px;">
+                <div class="wrap_header">联系信息</div>
+                <div class="infor_warp_box">
+                    <div style="height:25px;"></div>
+                    <div class="wrap_bar">
+                        <div class="wrap_bar_left">联系人</div>
+                        <input class="wrap_bar_rt" name="link_man" placeholder="您的称呼" value="">
+                        <div class="clear"></div>
+                        <div class="wrap_bar_pos" id="tip_lxr">请输入两个以上的中文称呼（如：张女士）</div>
+                        
+                    </div>
+                    <div class="wrap_bar">
+                        <div class="wrap_bar_left">联系电话</div>
+                        <input class="wrap_bar_rt" id="mobile" placeholder="您的手机号" name="link_phone" value="">
+                        <div class="wrap_bar_pos" id="tip_hm">请输入11位正确的手机号码</div>
+                        <div class="clear"></div>
+                    </div>
+                                        <button class="wrap_release" id="Immediate_elease">立即发布</button>
+                    <div class="wrap_bar" style="text-align: center;font-weight: bold"><a href="javascript:void(0);" id="btnIvrHelpAddSupplyQuestion" class="_zixun"><span>发布遇到问题？</span></a></div>
+                </div>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </div>
+    <div class="alert-message alert-message-mu">
+        <div class="alert-mask"></div>
+        <div class="alert-content">
+            <div class="clearfix alert-del-wrap">
+                <div class="alert-del"></div>
+            </div>
+            <h4 class="alert-title">面积转换器（转换亩）</h4>
+            <div class="alert-change clearfix">
+                <input type="text" class="alert-input fl">
+                <div class="alert-Company fl">
+                    <span class="Company">平方米</span>
+                    <ul class="alert-select-ul">
+                        <li>平方米</li>
+                        <li>公顷</li>
+                    </ul>
+                </div>
+                <div class="alert-select fl">
+                    <img src="__STATIC__/images/zudi/select1.png" alt="">
+                </div>
+            </div>
+            <div class="message-change">1平方米(㎡)=0.0015亩</div>
+            <div class="tac">
+                <div class="message-ensure">确定</div>
+            </div>
+        </div>
+    </div>
+    <div class="alert-message alert-message-mi">
+        <div class="alert-mask"></div>
+        <div class="alert-content">
+            <div class="clearfix alert-del-wrap">
+                <div class="alert-del"></div>
+            </div>
+            <h4 class="alert-title">面积转换器（转换平方米）</h4>
+            <div class="alert-change clearfix">
+                <input type="text" class="alert-input fl">
+                <div class="alert-Company fl">
+                    <span class="Company">亩</span>
+                    <ul class="alert-select-ul">
+                        <li>亩</li>
+                        <li>公顷</li>
+                    </ul>
+                </div>
+                <div class="alert-select fl">
+                    <img src="__STATIC__/images/zudi/select1.png" alt="">
+                </div>
+            </div>
+            <div class="message-change">1平方米(㎡)=0.0015亩</div>
+            <div class="tac">
+                <div class="message-ensure">确定</div>
+            </div>
+        </div>
+    </div>
+    <div class="alert-message alert-message-photo">
+        <div class="alert-mask"></div>
+        <div class="alert-content">
+            <div class="clearfix alert-del-wrap">
+                <div class="alert-del"></div>
+            </div>
+            <div class="alert-tips">你发布的地块没有图片，可能会导致客户关注率较低是否要继续发布 （发布后可补充）？</div>
+            <div class="alert-option">
+                <span class="supplement" id="supplement">补充图片</span> <span class="active" id="fabu">继续发布</span>
+            </div>
+        </div>
+    </div>
+    <!-- 错误提示弹窗 -->
+    <div class="alert-message alert_error_tips">
+        <div class="alert-mask"></div>
+        <div class="alert-content">
+            <div class="clearfix alert-del-wrap">
+                <div class="alert-del"></div>
+            </div>
+            <h5 class="alert-title error_tips_titile">错误提示</h5>
+            <div class="error_tips_content">
+                <img src="__STATIC__/images/zudi/warn.png" alt=""> <span id="alert_tips_content">啦啦啦啦啦啦啦啦啦啦啦啦啦</span>
+            </div>
+            <div class="tac">
+                <div class="message-ensure1">知道了</div>
+            </div>
+        </div>
+    </div>
+    <input type="hidden" name="buriedpointkey" value="">
+    <img width="100%" src="__STATIC__/images/zudi/loading.gif" style="display:none">
+</form>
+<script type="text/javascript">
+        var isTdzyw = false;
+    </script>
+
+
+<!--工具栏弹出框-->
+<!-- Modal -->
+<div class="tool-example">
+    <div class="modal toolmodal fade" id="toolModalDlg" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                    <h4 class="modal-title" id="myModalLabel">我的地合</h4>
+                </div>
+                <div class="modal-body">
+                    <div role="tabpanel">
+                        <!-- Nav tabs -->
+                        <ul id="tab_TOOLbar" class="nav nav-tabs nav-stacked" role="tablist">
+                            <li role="presentation"><a href="http://dihe.cn/supply/adddetail?land_use=16#mybook" aria-controls="mybook" role="tab" data-toggle="tab">我的收藏</a></li>
+                            <!-- <li role="presentation"><a href="#myorder" aria-controls="myorder" role="tab" data-toggle="tab">我的预约</a></li> -->
+                            <li role="presentation"><a href="http://dihe.cn/supply/adddetail?land_use=16#mynotice" aria-controls="mynotice" role="tab" data-toggle="tab">消息中心</a></li>
+                            <li role="presentation"><a href="http://dihe.cn/supply/adddetail?land_use=16#myfeedback" aria-controls="myfeedback" role="tab" data-toggle="tab">我的反馈</a></li>
+<!--                            <li role="presentation"><a href="#my_user_entrust" aria-controls="my_user_entrust" role="tab" data-toggle="tab">心愿卡</a></li>-->
+                        </ul>
+                        <!-- Tab panes -->
+                        <div class="tab-right-wrapper">
+                            <div class="tab-content">
+                                <div role="tabpanel" class="tab-pane active" id="mybook">
+                                    <div class="tab-topbar">
+                                        <span class="hdr hidden-xs">我收藏的地块</span> <span class="cnt"></span>
+                                        <div class="oEdit">
+                                            <div class="chkbox-wrapper" data-value="1">
+                                                <div class="chkbox-header">
+                                                    <span class="fa fa-check"></span><span>全选</span>
+                                                </div>
+                                            </div>
+                                            <button class="btn btn-success btn-sm quit">解除收藏</button>
+                                            <button class="btn btn-success btn-sm exit">退出编辑</button>
+                                        </div>
+                                        <div class="iEdit">
+                                            <button class="btn btn-success btn-sm">编辑</button>
+                                        </div>
+                                        <div class="pull-right hidden-xs" style="margin: 14px 35px;">
+                                            <span class="pindicator"></span>
+                                            <button class="btn btn-success btn-sm pre">
+                                                <span class="fa fa-chevron-left" aria-hidden="true"></span>
+                                            </button>
+                                            <button class="btn btn-success btn-sm next">
+                                                <span class="fa fa-chevron-right" aria-hidden="true"></span>
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="container">
+                                        <div class="row tool_blks _book_land_blks _quick_collect_box"></div>
+                                    </div>
+                                </div>
+
+                                <div role="tabpanel" class="tab-pane" id="mynotice">
+                                    <div class="message-center">
+                                        <div class="messageheader-tap">
+                                            <div class="messageheader-remind f_left _notice_get"><p class="messageheader-tip active">提醒</p></div>
+                                            <div class="messageheader-message f_left _push_msg_get"><p class="messageheader-contall">地合消息</p></div>
+                                            <div class="clear"></div>
+                                        </div>
+                                        <div class="message-container msg_blk">
+                                            <!-- 提醒 -->
+
+                                            <!-- 地合消息 -->
+
+                                        </div>
+                                        <div class="messagecon-footer">
+                                            <span class="glyphicon glyphicon-trash messagecon-icon _clear_notice_icon"></span>
+                                            <span class="messagecon-delete _clear_notice">清空所有提醒</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div role="tabpanel" class="tab-pane" id="myfeedback">
+                                    <div class="tab-topbar">
+                                        <span class="hdr hidden-xs">反馈你的问题或建议</span>
+                                        <div class="cfg_outter">
+                                            <button class="btn btn-success btn-sm cfgbtn">
+                                                <span class="glyphicon glyphicon-cog" aria-hidden="true"></span>
+                                            </button>
+                                            <div class="cfg_inner">
+                                                <!--div class="chkbox-wrapper" data-value="cancel"><div class="chkbox-header"><span class="fa fa-check"></span><span>取消反馈提示</span></div></div-->
+                                                <div class="chkbox-wrapper" data-value="empty">
+                                                    <div class="chkbox-header">
+                                                        <span class="fa fa-check"></span><span>清空所有反馈</span>
+                                                    </div>
+                                                </div>
+                                                <button class="btn btn-success btn-sm _cfg_confirm">确定所有修改</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="container">
+                                        <div class="row tool_blks _feedback_blks"></div>
+                                    </div>
+                                    <div class="inbar">
+                                        <div class="tbl">
+                                            <div style="display: table-row; width: 100%;">
+                                                <!--div class="c1">
+                                                 <div class="ipt_outter">
+                                                    <i class="fa fa-picture-o fa-2x"></i>
+                                                    <input class="ipt" name="picture" type="file" accept="image/*">
+                                                    </div>
+                                                    <a href=""><i class="fa fa-smile-o fa-2x"></i></a>
+                                                </div-->
+                                                <div style="display: table-cell; width: 80%;">
+                                                    <div>
+                                                        <input type="text" name="content" maxlength="128" class="msg" placeholder="请输入...">
+                                                    </div>
+                                                </div>
+                                                <div style="display: table-cell; width: 20%; text-align: center;">
+                                                    <button class="btn btn-success btn-sm btn-send">
+                                                        <i class="fa fa-paper-plane fa-md" aria-hidden="true"></i>
+                                                    </button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div role="tabpanel" class="tab-pane" id="my_user_entrust">
+                                    <div class="tab-topbar">
+                                        <span class="hdr btn btn-success text_white" data-type="buy">我要找地</span> <span class="hdr btn btn-default" data-type="sale">我要卖地</span>
+                                        <div class="cfg_outter">
+                                            <button class="btn btn-success btn-sm cfgbtn _save_wishcard">保存</button>
+                                        </div>
+                                    </div>
+                                    <div class="container">
+                                        <div class="row tool_blks">
+                                            <form id="user_entrust_form" method="post" class="">
+                                                <div class="form-group hidden">
+                                                    <label class="col-sm-2 control-label text-right">委托类型</label>
+                                                    <div class="col-sm-4">
+                                                        <div class="input-group">
+                                                            <input type="hidden" name="type" value="buy">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="col-sm-2 control-label text-right" style="margin-top: 13px;"><img src="__STATIC__/images/zudi/district2.jpg" alt="IMG">&nbsp;地区</label>
+                                                    <div class="col-sm-4">
+                                                        <div class="input-group">
+                                                            <input type="hidden" name="region_code" class="form-control" value="44"> <input type="text" data-area_id="44" class="form-control _user_entrust_region_selector" id="areaSelect_item_2">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="col-sm-2 control-label text-right" style="margin-top: 13px;"><img src="__STATIC__/images/zudi/target.jpg" alt="IMG">&nbsp;用途 </label>
+                                                    <div class="col-sm-4">
+                                                        <div class="input-group">
+                                                            <select name="land_use" class="form-control">
+                                                                <option value="">请选择</option>
+                                                                
+  >
+                                                                                                                             </ec>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="col-sm-2 control-label text-right" style="margin-top: 13px;"><img src="__STATIC__/images/zudi/area2.jpg" alt="IMG">&nbsp;面积 </label>
+                                                    <div class="col-sm-4">
+                                                        <div class="input-group">
+                                                            <input type="number" min="1" max="100000" class="form-control" name="area" value="" onpaste="return false" onkeydown="if(event.keyCode==13)event.keyCode=9" onkeypress="if ((event.keyCode&lt;48 || event.keyCode&gt;57)) event.returnValue=false"> <span class="input-group-addon">亩</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="col-sm-2 control-label text-right" style="margin-top: 13px;"><img src="__STATIC__/images/zudi/year.jpg" alt="IMG">&nbsp;年限 </label>
+                                                    <div class="col-sm-4">
+                                                        <div class="input-group">
+                                                            <input type="number" min="1" max="70" class="form-control" name="year" value="" onpaste="return false" onkeydown="if(event.keyCode==13)event.keyCode=9" onkeypress="if ((event.keyCode&lt;48 || event.keyCode&gt;57)) event.returnValue=false"> <span class="input-group-addon">年</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="col-sm-2 control-label text-right" style="margin-top: 13px;"><img src="__STATIC__/images/zudi/target.jpg" alt="IMG">&nbsp;价格 </label>
+                                                    <div class="col-sm-4">
+                                                        <div class="input-group">
+                                                            <input type="number" min="1" class="form-control" name="price" value="" onpaste="return false" onkeydown="if(event.keyCode==13)event.keyCode=9" onkeypress="if ((event.keyCode&lt;48 || event.keyCode&gt;57)) event.returnValue=false"> <span class="input-group-addon">万元</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                                                                <div class="form-group">
+                                                    <label class="col-sm-2 control-label text-right" style="margin-top: 13px;"><img src="__STATIC__/images/zudi/ipone.png" alt="IMG">&nbsp;手机</label>
+                                                    <div class="col-sm-4">
+                                                        <div class="input-group">
+                                                            <input type="text" class="form-control" name="phone" value="" style="max-width: 128px;">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                                                                <div class="form-group col-sm-12">
+                                                    <label class="col-sm-2 control-label text-right" style="margin-top: 13px;">备注 </label>
+                                                    <div class="col-sm-9">
+                                                        <textarea name="content" class="form-control limited autosize-transition " rows="5"></textarea>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group col-sm-12">
+                                                    <label class="col-sm-2 control-label text-right"> </label>
+                                                    <div class="col-sm-9">
+                                                        <span class="col-sm-12 label label-danger _my_user_entrust_tips"></span>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- end div class="tab-right-wrapper"-->
+                    </div>
+                </div>
+                <!-- end div class="modal-body"-->
+            </div>
+            <!-- end div class="modal-content" -->
+        </div>
+        <!-- end div class="modal-dialog" -->
+    </div>
+</div>
+<!-- tool-example -->
+<!-- 信息框 -->
+<div class="modal fade" id="info_dialog" tabindex="-1" role="dialog" aria-labelledby="infodlg" aria-hidden="true" data-backdrop="false">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header label-primary">
+                <button type="button" class="close" data-dismiss="modal">
+                    <span aria-hidden="true">×</span><span class="sr-only">Close</span>
+                </button>
+                <h4 class="modal-title" id="infodlg">信息</h4>
+            </div>
+            <div class="modal-body">
+                <p></p>
+            </div>
+            <div class="modal-footer"></div>
+        </div>
+    </div>
+</div>
+<!-- 删除提醒 -->
+<div class="messagecon-empty">
+    <div class="empty-bg"></div>
+    <div class="empty-con">
+        <div class="empty-list">
+            <p>清空所有提醒</p>
+            <p>确定要清空所有提醒吗？</p>
+            <div class="empty-btn">
+                <button class="empty-cancel">取消</button>
+                <button class="_clear_notice_confirm">确定</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- 收藏地块的模板-->
+<script type="text/template" id="book_blk">
+    <#for (var i=0;i<list.length;i++){#>
+    <div class="col-md-3 col-sm-6 col-xs-6 margin-top20 widden land-look <#if(list[i].supply_is_deal != 0)echo('trade');#>">
+    <div class="mask"></div>
+    <span class="ttxt">已交易</span>
+    <div class="selected"><span class="fa fa-check" aria-hidden="true"></span></div>
+    <div class="llc-main">
+    <#if (list[i].recommend){echo('<div class="recom"></div>');}#>
+    <div class="post-thumbnail" style="height:100px"><img class="_lazy img-responsive" src="/static/pc/images/gdefault.png" data-original="<#=list[i].pc_img_url#>" style="display: block;">
+    <#if (list[i].supply_rank){#><div class="ll-grade"><#=list[i].supply_rank#></div><#}#></div>
+    <div class="content-wrap">
+    <h1 class="entry-title"><a href="<#=list[i].url#>" target="_blank" class="featured-image"><i class="fa fa-heart-o font30 _collect_btn" data-supply_id="<#=list[i].supply_id#>" data-collect_id="<#=list[i].id#>" data-state="false"></i></a></h1>
+    </div>
+    </div>
+    <div class="land_info_wrapper ll-main" style="height:auto;">
+    <div class="llm-text font12">
+    <a href="<#=list[i].url#>" target="_blank" title="<#=list[i].supply_title#>"><#=list[i].supply_title#></a>
+    </div>
+    <div class="text_orange font12 llm-margin2">
+    <#if(list[i].supply_transfer_fee && list[i].supply_rent_fee){#>             
+    <span class=""><#=list[i].supply_transfer_fee#></span>                
+    <div class="pull-right vertical-bottom"><span><#=list[i].supply_rent_fee#></span>元/年</div>
+    <#}else if(list[i].supply_transfer_fee){#>
+    <span class=""><#=list[i].supply_transfer_fee#></span>                
+    <span class="pull-right"></span>
+    <#} else if(list[i].supply_rent_fee){#>
+    <div><span><#=list[i].supply_rent_fee#></span>元/年</div>                
+    <span class="pull-right"></span>
+    <#} else {#>
+    <div><span>价格面议</span></div>
+    <span class="pull-right"></span>
+    <#}#>          
+    </div>
+    <div class="clear"></div>
+    </div>
+    </div>
+    <#}#>
+</script>
+<!-- 预约地块的模板-->
+<script type="text/template" id="order_blk">
+    <#for (var i=0;i<list.length;i++){#>
+    <div class="col-md-3 col-sm-6 col-xs-6 margin-top20 widden land-look <#if(list[i].supply_is_deal != 0)echo('trade');#>">
+    <div class="mask"></div>
+    <span class="ttxt">已交易</span>
+    <div class="selected"><span class="fa fa-check" aria-hidden="true"></span></div>
+    <div class="llc-main">
+    <#if (list[i].recommend){echo('<div class="recom"></div>');}#>
+    <div class="post-thumbnail"><img class="_lazy img-responsive" src="/static/pc/images/gdefault.png" data-original="<#=list[i].pc_img_url#>" style="display: block;">
+    <div class="ll-grade"><#=list[i].supply_rank#></div></div>
+    <div class="content-wrap">
+    <h1 class="entry-title"><a href="<#=list[i].url#>" target="_blank" class="featured-image"><i class="fa fa-star fa-2x _reserve_btn" data-supply_id="<#=list[i].supply_id#>" data-collect_id="<#=list[i].id#>" data-state="false"></i></a></h1>
+    </div>
+    </div>
+    <div class="land_info_wrapper ll-main">
+    <div class="llm-text font12">
+    <a href="<#=list[i].url#>" target="_blank" title="<#=list[i].supply_title#>"><#=list[i].supply_title#></a>
+    </div>
+    <div class="text_orange font12 llm-margin2">
+    <#if(list[i].supply_transfer_fee && list[i].supply_rent_fee){#>             
+    <span class=""><#=list[i].supply_transfer_fee#></span>                
+    <div class="pull-right vertical-bottom"><span><#=list[i].supply_rent_fee#></span>元/年</div>
+    <#}else if(list[i].supply_transfer_fee){#>
+    <span class=""><#=list[i].supply_transfer_fee#></span>                
+    <span class="pull-right"></span>
+    <#} else if(list[i].supply_rent_fee){#>
+    <div><span class=""><#=list[i].supply_rent_fee#></span>元/年</div>              
+    <span class="pull-right"></span>
+    <#} else {#>
+    <div><span>价格面议</span></div>
+    <span class="pull-right"></span>
+    <#}#>          
+    </div>
+    </div>
+    </div>
+    <#}#>
+</script>
+<!-- 通知消息的模板-->
+<script type="text/template" id="notice_blk">
+    <#for (var i=0;i<list.length;i++){#>
+    <#if (list[i].date != ''){ #>
+    <div class="feedback_date"><span class="badge"><#=list[i].date#></span></div>
+    <#}#>
+
+    <div class="fb_tbl">
+    <div class="fb_row" >
+    <div class="avt">
+    <div><img src="/static/pc/images/wishcard.jpg" /></div>
+    <span class="name"><#=list[i].sender_name#></span>
+    </div>
+    <div class="bubble_l">
+    <div class="bubble_arrow"></div>
+    <div class="wrapper">
+    <div>
+    <#=list[i].content#>
+    </div>
+    </div>
+    </div>
+    <div class="feedback_time">
+    <#=list[i].time#>
+    </div>
+    </div>
+    </div>
+    <#}#>
+</script>
+<script type="text/template" id="notices_blk">
+<ul class="messagecon-ul">                                                                                                 
+    <#for (var i=0;i<list.length;i++){#>
+    <li class='_notice_list' data-notice_id='<#=list[i].id#>'>
+        <#if(list[i].url != ''){#>
+        <a href="<#=list[i].url#>" target="_blank" title="<#=list[i].content#>">
+        <#}#>
+            <div class="messagecon-state f_left">
+                <img src="<#=list[i].img_url#>" alt="">
+            </div>
+            <div class="messagecon-list f_left">
+                <p class="messagecon-tip"><#=list[i].title#></p>
+                <p class="messagecon-do"><#=list[i].content#></p>
+            </div>
+            <div class="messagecon-time f_right"><p><#=list[i].create_time_format#></p></div>
+        <#if(list[i].url != ''){#>
+        </a>
+        <#}#>
+    </li>                                                 
+    <#}#>
+</ul>
+</script>
+<script type="text/template" id="push_msg_blk">
+<ul class="dihecon-ul">
+<#for (var i=0;i<list.length;i++){#>
+    <li>
+    <div class="dihecon-li">
+        <div class="dihecon-state f_left">
+            <img src='<#=list[i].img_url#>' >
+        </div>
+        <div class="dihecon-list f_left">
+            <p class="dihecon-tip"><#=list[i].title#></p>
+            <div class="dihecon-do"><p><#=list[i].content#></p></div>
+        </div>
+        <div class="dihecon-time f_left"><span><#=list[i].create_time_format#></span><a href="<#=list[i].url#>" class="f_right">查看全文</a><div class="clear"></div></div>
+        <div class="clear"></div>
+    </div>
+    </li>
+<#}#>
+</ul>
+</script>
+<!-- 反馈消息的模板-->
+<script type="text/template" id="feedback_blk">
+    <#for (var i=0;i<list.length;i++){#>
+    <#if (list[i].date != ''){ #>
+    <div class="feedback_date"><span class="badge"><#=list[i].date#></span></div>
+    <#}#>
+
+    <#if (list[i].mine == '0'){#>
+    <div class="fb_tbl">
+    <div class="fb_row" >
+    <div class="avt">
+    <div><img src="/static/pc/images/wishcard.jpg" /></div>
+    <span class="name"><#=list[i].sender_name#></span>
+    </div>
+    <div class="bubble_l">
+    <div class="bubble_arrow"></div>
+    <div class="wrapper">
+    <div>
+    <#=list[i].content#>
+    </div>
+    </div>
+    </div>
+    <div class="feedback_time">
+    <#=list[i].time#>
+    </div>
+    </div>
+    </div>
+    <#}else{#>
+    <div class="fb_tbl">
+    <div class="fb_row" >
+    <div class="feedback_time">
+    <#=list[i].time#>
+    </div>
+    <div class="bubble_r">
+    <div class="bubble_arrow"></div>
+    <div class="wrapper">
+    <div>
+    <#=list[i].content#>
+    <#if(list[i].rsp != undefined){echo('<i class="fa fa-refresh fa-spin"></i>');}#>
+    </div>
+    </div>
+    </div>
+    <div class="avt">
+    <div><img src="/static/pc/images/me.png" /></div>
+    <span class="name">我</span>
+    </div>
+    </div>
+    </div>
+    <#}#>
+    <#}#>
+</script>
+<!-- 我要找地地块列表模板 -->
+<script type="text/template" id="landlook_blk">
+    <#if(supply_list.length == 0){#>
+    <div class="text-center margin-top50">
+    <h3 class="text_bulegreen">抱歉，没有找到你想要的地块</h3>
+    <p class="margin-top20 font18">你可以<button class="btn btn-success btn-sm submit-md font16 _edit_wishcard" style="margin: 0px 15px;">填写心愿卡</button>地合网将为你提供找地|卖地服务，并将合适的优质地块推荐给您。</p>
+    </div>
+    <#}#>
+    <#for (var i=0;i < supply_list.length;i++){#>
+    <div class="col-md-3 col-sm-6 col-xs-6 margin-top20 land-look">
+    <div class="11-content">
+    <div class="llc-main">
+    <#if (supply_list[i].recommend==1){echo('<div class="recom"></div>');}#>
+    <div class="post-thumbnail"><img src="/static/script/common/lazyload/img/grey.png" data-original="<#=supply_list[i].pc_img_url#>" class="_lazy img-responsive"/>
+    <div class="ll-grade"><#=supply_list[i].rank#></div>
+    </div>
+    <#if(supply_list[i].deal==1){#><div class="content-wrap"><a href="<#=supply_list[i].url#>" target="_blank"><div class="success-mask padding-top60"><img src="/static/pc/images/details-success.png"></div></a></div><#}#>
+    <#if(supply_list[i].deal!=1){#>
+    <div class="content-wrap">
+    <h1 class="entry-title"><a href="<#=supply_list[i].url#>" class="featured-image" target="_blank"><i class="fa fa-heart-o font30 _collect_btn" data-supply_id="<#=supply_list[i].id#>"></i></a></h1>
+    </div>
+    <#}#>
+    </div>
+    </div>
+    <div class="land_info_wrapper ll-main" >
+    <div class="llm-text">
+    <#if (supply_list[i].aerial_video_id){#>
+    <span class="label label-success"><i class="fa fa-plane"></i>航拍</span>
+    <#}else if (supply_list[i].video_id){#>
+    <span class="label label-success"><i class="fa fa-video-camera"></i>手机</span>
+    <#}#>
+    <a href="<#=supply_list[i].url#>" target="_blank"><#=supply_list[i].title#></a>
+    </div>
+    <div class="text_orange font18 llm-margin">
+    <#if (supply_list[i].converte_transfer_fee != 0 && supply_list[i].converte_rent_fee != 0){#>
+    <span class="h2"><#=supply_list[i].converte_transfer_fee#></span> 
+    <div class="pull-right vertical-bottom margin-top5"><span><#=supply_list[i].converte_rent_fee#></span>元/年</div>
+    <#}else if(supply_list[i].converte_transfer_fee != 0){#>
+    <span class="h2"><#=supply_list[i].converte_transfer_fee#></span>
+    <span class="pull-right"></span>
+    <#}else if(supply_list[i].converte_rent_fee != 0){#>
+    <div><span class="h2"><#=supply_list[i].converte_rent_fee#></span>元/年</div>
+    <span class="pull-right"></span>
+    <#} else{#>
+    <div><span class="h2">价格面议</span></div>
+    <span class="pull-right"></span>
+    <#}#>
+    </div>
+    <ul class="llm-tag">
+    <#for(var j=0;j<supply_list[i].tags_array.length;j++){#>
+    <#if (j<3 && supply_list[i].tags_array[j]) {#>
+    <li class="llm-badge tag_badge"> <#=supply_list[i].tags_array[j]#></li>
+    <#}#>
+    <#}#>
+    </ul>
+    </div>
+    </div>
+    <#}#>
+</script>
+<!-- 地块评价列表模板 -->
+<script type="text/template" id="evaluate_blk">
+    <#for (var i=0;i < commentInfo.length;i++){#>
+    <div class="user-all">
+            <div class="user-left f_left">
+                <div class="user-l1">
+                    <div class="user-img1">
+                    <img src="/static/pc/images/land1.jpg">
+                    </div>
+                    <p class="f_left"><#=commentInfo[i].landTitle#>
+                    </p>
+                </div>
+                <p class="user-space">评价人
+                    <span>:&nbsp<#=commentInfo[i].commenterNickName#></span>
+                </p>
+                <p class="user-space2">下单时间&nbsp
+                    <span>:&nbsp<#=commentInfo[i].createdTime#></span>
+                </p>
+            </div>
+            <div class="user-right f_left">
+                <div class="user-star">
+                    <div class="user-s1 f_left">
+                        <p class="user-sp1 f_left">服务与描述相符</p>
+                        <div class="user-simg f_left">
+                            <#for (var v=1;v <= commentInfo[i].matchLevel;v++){#>
+                            <p class="glyphicon glyphicon-star user-sp2"></p>
+                            <#}#>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="user-s1 f_left">
+                        <p class="user-sp1 f_left">商家服务态度</p>
+                        <div class="user-simg f_left">
+                            <#for (var x=1;x <= commentInfo[i].attitudeLevel;x++){#>
+                            <p class="glyphicon glyphicon-star user-sp2"></p>
+                            <#}#>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="user-s1 f_left">
+                        <p class="user-sp1 f_left">商家服务速度</p>
+                        <div class="user-simg f_left">
+                            <#for (var y=1;y <= commentInfo[i].timeLevel;y++){#>
+                            <p class="glyphicon glyphicon-star user-sp2"></p>
+                            <#}#>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="user-s1 f_left">
+                        <p class="user-sp1 f_left">服务质量满意度</p>
+                        <div class="user-simg f_left">
+                            <#for (var z=1;z <= commentInfo[i].satisfactionLevel;z++){#>
+                            <p class="glyphicon glyphicon-star user-sp2"></p>
+                            <#}#>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                <div class="user-rfirst">
+                    <div class="user-rcon">
+                        <p class="ur-1 f_left">首次评价&nbsp;:&nbsp;<#=commentInfo[i].firstComment#></p>
+                        <div class="clear"></div>
+                    </div>
+                    <p class="ur-2">
+                        <#=commentInfo[i].firstCommentTime#>
+                    </p>
+                </div>
+                <#if(commentInfo[i].appendComment){#>
+                <div class="user-again">
+                    <div class="user-rcon">
+                        <p class="ur-1 f_left">[追加评价]&nbsp;:&nbsp;<#=commentInfo[i].appendComment#></p>
+                        <div class="clear"></div>
+                    </div>
+                    <p class="ur-2">
+                        <#=commentInfo[i].appendCommentTime#>
+                    </p>
+                </div>
+                <#}#>
+            </div>
+            <div class="clear"></div>
+        </div>
+    <#}#>
+</script>
+<!-- 分页模板 :pinfo:{total,curr}-->
+<script type="text/template" id="paginator_blk">
+    <div class="pages row" data-total="<#=pinfo.total#>" data-curr="<#=pinfo.curr#>">
+    <div class="pages-extend pull-right">
+    <div class="pull-left margin-left-10">共<#=pinfo.total#>页</div>
+    <div class="pull-left margin-left-10">到
+    <input type="" placeholder="" id="inputPassword2" class="pages-extend-input">页
+    </div>
+    <div class="pull-left margin-left-10">
+    <button class="btn  btn-height">确定</button>
+    </div>
+    </div>
+    <div class="pages-number">
+    <ul class="pagination pull-right">
+    <li class="pre <#if(pinfo.curr==1)echo('disabled');#>" ><a href=javascript:void(0); data-page="">上一页</a></li>
+    <#for(var i =1;i<=pinfo.total;i++){#>
+    <#if(i >= pinfo.fleft.min && i <= pinfo.fleft.max){#>
+    <#if (!pinfo.fleft.init){#>
+    <li><a href=javascript:void(0); data-page="">...</a></li>
+    <#pinfo.fleft.init=true;}else{#>
+    <#continue;}#>
+    <#}else if(i >= pinfo.fright.min && i <= pinfo.fright.max){#>
+    <#if (!pinfo.fright.init){#>
+    <li><a href=javascript:void(0); data-page="">...</a></li>
+    <#pinfo.fright.init=true;}else{#>
+    <#continue;}#>
+    <#}else{#>
+    <li <#if(i == pinfo.curr)echo(' class="active"');#>><a href=javascript:void(0); data-page=<#=i#>><#=i#></a></li>
+    <#}#>
+    <#}#>
+    <li class="next <#if(pinfo.curr==pinfo.total)echo('disabled');#>"><a href=javascript:void(0); data-page="">下一页</a></li>
+    </ul>
+    </div>
+    </div>
+</script><script type="text/javascript" src="__STATIC__/js/gb-index.min.js"></script>
+<!-- 这是input校验JS -->
+<script type="text/javascript" src="__STATIC__/js/until.min.js"></script>
+<!-- Placed at the end of the document so the pages load faster -->
+<script type="text/javascript" src="__STATIC__/js/bootstrap.min.js"></script>
+<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+<script type="text/javascript" src="__STATIC__/js/ie10-viewport-bug-workaround.min.js"></script>
+<script type="text/javascript" src="__STATIC__/js/bootstrap-select.min.js"></script>
+<script type="text/javascript" src="__STATIC__/js/holder.min.js"></script>
+<script type="text/javascript" src="__STATIC__/js/jquery.lazyload.min.js"></script>
+<script type="text/javascript" src="__STATIC__/js/tpl.min.js"></script>
+<script type="text/javascript" src="__STATIC__/js/main.min.js"></script>
+<script type="text/javascript" src="__STATIC__/js/jquery.areaSelect.min.js"></script>
+<link rel="stylesheet" href="__STATIC__/js/style.min(1).css" type="text/css">
+<!-- Just for debugging purposes. Don't actually copy these 2 lines! -->
+<!--[if lt IE 9]><script type="text/javascript" src="//static.dihe.cn/static/style/common/bs331/js/ie8-responsive-file-warning.min.js?20170817"></script>
+<![endif]-->
+<script type="text/javascript" src="__STATIC__/js/ie-emulation-modes-warning.min.js"></script>
+<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+<!--[if lt IE 10]>
+<script type="text/javascript" src="//static.dihe.cn/static/script/common/jquery.placeholder.min.js?20170817"></script>
+<script>
+    $(function() {
+        $('input, textarea').placeholder();
+    });
+</script>
+<script type="text/javascript" src="//static.dihe.cn/static/style/common/bs331/js/html5shiv.min.js?20170817"></script>
+<script type="text/javascript" src="//static.dihe.cn/static/style/common/bs331/js/respond.min.js?20170817"></script>
+<![endif]-->
+<script type="text/javascript" src="__STATIC__/js/jquery.bind_phone.min.js"></script>
+<script type="text/javascript" src="__STATIC__/js/jquery.quick_sign.min.js"></script>
+<script type="text/javascript" src="__STATIC__/js/ui-demo-v2014.min.js"></script>
+<script type="text/javascript" src="__STATIC__/js/7moorInit.js" async="async"></script>
+<div style="display: none;">
+<script type="text/javascript" src="__STATIC__/js/tj.min.js"></script><script language="javascript" type="text/javascript" src="__STATIC__/js/17693874.js"></script><a href="http://www.51.la/?17693874" target="_blank" title="51.La 网站流量统计系统"><img alt="51.La 网站流量统计系统" src="__STATIC__/js/icon_0.gif" style="border:none"></a>
+<span id="cnzz_stat_icon_1254630752"><a href="http://www.cnzz.com/stat/website.php?web_id=1254630752" target="_blank" title="站长统计">站长统计</a></span><script src="__STATIC__/js/stat.php" type="text/javascript"></script><script src="__STATIC__/js/core.php" charset="utf-8" type="text/javascript"></script>
+</div><script type="text/javascript" src="__STATIC__/js/online"></script><div><div class="qimo_chatpup" id="qimo_chatpup" style="display: none; border-top-color: rgb(0, 180, 95); border-left-color: rgb(0, 180, 95); border-right-color: rgb(0, 180, 95); right: 18px;"><iframe id="chatIframe" src="__STATIC__/js/moor_chat.html" height="100%" width="100%"></iframe></div></div><script type="text/javascript" src="__STATIC__/js/online(1)"></script><div><div class="qimo_videopup" id="qimo_videopup" style="display: none"><div style="" class="dragbar" id="drag"></div><div class="minimg" id="minimg"><img src="__STATIC__/js/small.png"></div><img src="__STATIC__/js/big.png" class="maximg" id="maximg" style="display: none"> <div id="mask"></div><iframe id="videoIframe" src="__STATIC__/js/saved_resource.html" height="100%" width="100%"></iframe></div></div>
+<script>
+var _target = '/supply/addcategory';
+var indexDomain = 'http://dihe.cn';
+</script>
+<script type="text/javascript" src="__STATIC__/js/header.js"></script>
+<script type="text/javascript">
+    var _vds = _vds || [];
+    window._vds = _vds;
+    (function() {
+        _vds.push(['setAccountId', '980516f6cb073919']);
+
+                _vds.push(['setCS1', 'user_id', '939067']);
+        _vds.push(['setCS2', 'user_name', 'zhaoyun']);
+        _vds.push(['setCS3', 'user_phone', '']);
+                
+        (function() {
+            var vds = document.createElement('script');
+            vds.type = 'text/javascript';
+            vds.async = true;
+            vds.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'dn-growing.qbox.me/vds.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(vds, s);
+        })();
+    })();
+</script><script type="text/javascript" src="__STATIC__/js/log_update_alerts.js"></script>
+
+<script type="text/javascript" src="__STATIC__/js/jquery-ui.min.js"></script>
+<script type="text/javascript" src="__STATIC__/js/jquery.google-map.min.js"></script>
+<script type="text/javascript" src="__STATIC__/js/jquery.ui.widget.js"></script>
+<script type="text/javascript" src="__STATIC__/js/jquery.iframe-transport.js"></script>
+<script type="text/javascript" src="__STATIC__/js/jquery.fileupload.js"></script>
+<script type="text/javascript" src="__STATIC__/js/areaChoose.js"></script>
+<script type="text/javascript" src="__STATIC__/js/supply.adddetail.js"></script><div class="areaSelect" style="position: absolute; display: none; left: 0px; top: 220px;"><div class="fclose"><a href="javascript:areaSelectAction.close(&#39;areaSelect_item_1&#39;);void(0);"><b>关闭</b></a></div><div class="ftitle"><h4 class="divleft">热点城市</h4></div><hr class="dashed"><div class="fcontent"><div class="item hot"><a href="javascript:areaSelectAction.select(&quot;areaSelect_item_1&quot;,4420,{&quot;name&quot;:&quot;中山&quot;,&quot;id&quot;:&quot;4420&quot;,&quot;parent&quot;:&quot;44&quot;,&quot;type&quot;:&quot;2&quot;});void(0);">中山</a></div><div class="item hot"><a href="javascript:areaSelectAction.select(&quot;areaSelect_item_1&quot;,4407,{&quot;name&quot;:&quot;江门&quot;,&quot;id&quot;:&quot;4407&quot;,&quot;parent&quot;:&quot;44&quot;,&quot;type&quot;:&quot;2&quot;});void(0);">江门</a></div><div class="item hot"><a href="javascript:areaSelectAction.select(&quot;areaSelect_item_1&quot;,4404,{&quot;name&quot;:&quot;珠海&quot;,&quot;id&quot;:&quot;4404&quot;,&quot;parent&quot;:&quot;44&quot;,&quot;type&quot;:&quot;2&quot;});void(0);">珠海</a></div><div class="item hot"><a href="javascript:areaSelectAction.select(&quot;areaSelect_item_1&quot;,4406,{&quot;name&quot;:&quot;佛山&quot;,&quot;id&quot;:&quot;4406&quot;,&quot;parent&quot;:&quot;44&quot;,&quot;type&quot;:&quot;2&quot;});void(0);">佛山</a></div><div class="item hot"><a href="javascript:areaSelectAction.select(&quot;areaSelect_item_1&quot;,4401,{&quot;name&quot;:&quot;广州&quot;,&quot;id&quot;:&quot;4401&quot;,&quot;parent&quot;:&quot;44&quot;,&quot;type&quot;:&quot;2&quot;});void(0);">广州</a></div><div class="item hot"><a href="javascript:areaSelectAction.select(&quot;areaSelect_item_1&quot;,4402,{&quot;name&quot;:&quot;肇庆&quot;,&quot;id&quot;:&quot;4402&quot;,&quot;parent&quot;:&quot;44&quot;,&quot;type&quot;:&quot;2&quot;});void(0);">肇庆</a></div><div class="item hot"><a href="javascript:areaSelectAction.select(&quot;areaSelect_item_1&quot;,4418,{&quot;name&quot;:&quot;清远&quot;,&quot;id&quot;:&quot;4418&quot;,&quot;parent&quot;:&quot;44&quot;,&quot;type&quot;:&quot;2&quot;});void(0);">清远</a></div><div class="item hot"><a href="javascript:areaSelectAction.select(&quot;areaSelect_item_1&quot;,4413,{&quot;name&quot;:&quot;惠州&quot;,&quot;id&quot;:&quot;4413&quot;,&quot;parent&quot;:&quot;44&quot;,&quot;type&quot;:&quot;2&quot;});void(0);">惠州</a></div></div><div class="ftitle hidden"><h6 class="divleft">地区快速筛选：</h6><input type="text" class="text middletxt" onkeyup="areaSelectAction.drawSearchList(&quot;areaSelect_item_1&quot;,this)"></div><hr class="dashed"><div class="ftitle"><span><span><a href="javascript:areaSelectAction.select(&quot;areaSelect_item_1&quot;,0,{&quot;name&quot;:&quot;全国&quot;,&quot;id&quot;:&quot;0&quot;,&quot;subdomain&quot;:&quot;www&quot;});void(0);">全国</a></span> &gt; <span><a href="javascript:areaSelectAction.select(&quot;areaSelect_item_1&quot;,0,{&quot;id&quot;:&quot;0&quot;,&quot;name&quot;:&quot;全国&quot;,&quot;parent&quot;:&quot;0&quot;});void(0);">全国</a></span> &gt; <span><a href="javascript:areaSelectAction.select(&quot;areaSelect_item_1&quot;,,);void(0);"></a></span> &gt; </span><a href="javascript:areaSelectAction.select(&quot;areaSelect_item_1&quot;,0,{&quot;name&quot;:&quot;全国&quot;,&quot;id&quot;:&quot;0&quot;,&quot;subdomain&quot;:&quot;www&quot;});void(0);"> 返回上一级</a></div><div class="fcontent"><div class="item"><a href="javascript:areaSelectAction.select(&quot;areaSelect_item_1&quot;,11,{&quot;id&quot;:&quot;11&quot;,&quot;name&quot;:&quot;北京&quot;,&quot;parent&quot;:&quot;0&quot;});void(0);">北京</a></div><div class="item"><a href="javascript:areaSelectAction.select(&quot;areaSelect_item_1&quot;,12,{&quot;id&quot;:&quot;12&quot;,&quot;name&quot;:&quot;天津&quot;,&quot;parent&quot;:&quot;0&quot;});void(0);">天津</a></div><div class="item"><a href="javascript:areaSelectAction.select(&quot;areaSelect_item_1&quot;,13,{&quot;id&quot;:&quot;13&quot;,&quot;name&quot;:&quot;河北&quot;,&quot;parent&quot;:&quot;0&quot;});void(0);">河北</a></div><div class="item"><a href="javascript:areaSelectAction.select(&quot;areaSelect_item_1&quot;,14,{&quot;id&quot;:&quot;14&quot;,&quot;name&quot;:&quot;山西&quot;,&quot;parent&quot;:&quot;0&quot;});void(0);">山西</a></div><div class="item"><a href="javascript:areaSelectAction.select(&quot;areaSelect_item_1&quot;,15,{&quot;id&quot;:&quot;15&quot;,&quot;name&quot;:&quot;内蒙古&quot;,&quot;parent&quot;:&quot;0&quot;});void(0);">内蒙古</a></div><div class="item"><a href="javascript:areaSelectAction.select(&quot;areaSelect_item_1&quot;,21,{&quot;id&quot;:&quot;21&quot;,&quot;name&quot;:&quot;辽宁&quot;,&quot;parent&quot;:&quot;0&quot;});void(0);">辽宁</a></div><div class="item"><a href="javascript:areaSelectAction.select(&quot;areaSelect_item_1&quot;,22,{&quot;id&quot;:&quot;22&quot;,&quot;name&quot;:&quot;吉林&quot;,&quot;parent&quot;:&quot;0&quot;});void(0);">吉林</a></div><div class="item"><a href="javascript:areaSelectAction.select(&quot;areaSelect_item_1&quot;,23,{&quot;id&quot;:&quot;23&quot;,&quot;name&quot;:&quot;黑龙江&quot;,&quot;parent&quot;:&quot;0&quot;});void(0);">黑龙江</a></div><div class="item"><a href="javascript:areaSelectAction.select(&quot;areaSelect_item_1&quot;,31,{&quot;id&quot;:&quot;31&quot;,&quot;name&quot;:&quot;上海&quot;,&quot;parent&quot;:&quot;0&quot;});void(0);">上海</a></div><div class="item"><a href="javascript:areaSelectAction.select(&quot;areaSelect_item_1&quot;,32,{&quot;id&quot;:&quot;32&quot;,&quot;name&quot;:&quot;江苏&quot;,&quot;parent&quot;:&quot;0&quot;});void(0);">江苏</a></div><div class="item"><a href="javascript:areaSelectAction.select(&quot;areaSelect_item_1&quot;,33,{&quot;id&quot;:&quot;33&quot;,&quot;name&quot;:&quot;浙江&quot;,&quot;parent&quot;:&quot;0&quot;});void(0);">浙江</a></div><div class="item"><a href="javascript:areaSelectAction.select(&quot;areaSelect_item_1&quot;,34,{&quot;id&quot;:&quot;34&quot;,&quot;name&quot;:&quot;安徽&quot;,&quot;parent&quot;:&quot;0&quot;});void(0);">安徽</a></div><div class="item"><a href="javascript:areaSelectAction.select(&quot;areaSelect_item_1&quot;,35,{&quot;id&quot;:&quot;35&quot;,&quot;name&quot;:&quot;福建&quot;,&quot;parent&quot;:&quot;0&quot;});void(0);">福建</a></div><div class="item"><a href="javascript:areaSelectAction.select(&quot;areaSelect_item_1&quot;,36,{&quot;id&quot;:&quot;36&quot;,&quot;name&quot;:&quot;江西&quot;,&quot;parent&quot;:&quot;0&quot;});void(0);">江西</a></div><div class="item"><a href="javascript:areaSelectAction.select(&quot;areaSelect_item_1&quot;,37,{&quot;id&quot;:&quot;37&quot;,&quot;name&quot;:&quot;山东&quot;,&quot;parent&quot;:&quot;0&quot;});void(0);">山东</a></div><div class="item"><a href="javascript:areaSelectAction.select(&quot;areaSelect_item_1&quot;,41,{&quot;id&quot;:&quot;41&quot;,&quot;name&quot;:&quot;河南&quot;,&quot;parent&quot;:&quot;0&quot;});void(0);">河南</a></div><div class="item"><a href="javascript:areaSelectAction.select(&quot;areaSelect_item_1&quot;,42,{&quot;id&quot;:&quot;42&quot;,&quot;name&quot;:&quot;湖北&quot;,&quot;parent&quot;:&quot;0&quot;});void(0);">湖北</a></div><div class="item"><a href="javascript:areaSelectAction.select(&quot;areaSelect_item_1&quot;,43,{&quot;id&quot;:&quot;43&quot;,&quot;name&quot;:&quot;湖南&quot;,&quot;parent&quot;:&quot;0&quot;});void(0);">湖南</a></div><div class="item"><a href="javascript:areaSelectAction.select(&quot;areaSelect_item_1&quot;,44,{&quot;id&quot;:&quot;44&quot;,&quot;name&quot;:&quot;广东&quot;,&quot;parent&quot;:&quot;0&quot;});void(0);">广东</a></div><div class="item"><a href="javascript:areaSelectAction.select(&quot;areaSelect_item_1&quot;,45,{&quot;id&quot;:&quot;45&quot;,&quot;name&quot;:&quot;广西&quot;,&quot;parent&quot;:&quot;0&quot;});void(0);">广西</a></div><div class="item"><a href="javascript:areaSelectAction.select(&quot;areaSelect_item_1&quot;,46,{&quot;id&quot;:&quot;46&quot;,&quot;name&quot;:&quot;海南&quot;,&quot;parent&quot;:&quot;0&quot;});void(0);">海南</a></div><div class="item"><a href="javascript:areaSelectAction.select(&quot;areaSelect_item_1&quot;,50,{&quot;id&quot;:&quot;50&quot;,&quot;name&quot;:&quot;重庆&quot;,&quot;parent&quot;:&quot;0&quot;});void(0);">重庆</a></div><div class="item"><a href="javascript:areaSelectAction.select(&quot;areaSelect_item_1&quot;,51,{&quot;id&quot;:&quot;51&quot;,&quot;name&quot;:&quot;四川&quot;,&quot;parent&quot;:&quot;0&quot;});void(0);">四川</a></div><div class="item"><a href="javascript:areaSelectAction.select(&quot;areaSelect_item_1&quot;,52,{&quot;id&quot;:&quot;52&quot;,&quot;name&quot;:&quot;贵州&quot;,&quot;parent&quot;:&quot;0&quot;});void(0);">贵州</a></div><div class="item"><a href="javascript:areaSelectAction.select(&quot;areaSelect_item_1&quot;,53,{&quot;id&quot;:&quot;53&quot;,&quot;name&quot;:&quot;云南&quot;,&quot;parent&quot;:&quot;0&quot;});void(0);">云南</a></div><div class="item"><a href="javascript:areaSelectAction.select(&quot;areaSelect_item_1&quot;,54,{&quot;id&quot;:&quot;54&quot;,&quot;name&quot;:&quot;西藏&quot;,&quot;parent&quot;:&quot;0&quot;});void(0);">西藏</a></div><div class="item"><a href="javascript:areaSelectAction.select(&quot;areaSelect_item_1&quot;,61,{&quot;id&quot;:&quot;61&quot;,&quot;name&quot;:&quot;陕西&quot;,&quot;parent&quot;:&quot;0&quot;});void(0);">陕西</a></div><div class="item"><a href="javascript:areaSelectAction.select(&quot;areaSelect_item_1&quot;,62,{&quot;id&quot;:&quot;62&quot;,&quot;name&quot;:&quot;甘肃&quot;,&quot;parent&quot;:&quot;0&quot;});void(0);">甘肃</a></div><div class="item"><a href="javascript:areaSelectAction.select(&quot;areaSelect_item_1&quot;,63,{&quot;id&quot;:&quot;63&quot;,&quot;name&quot;:&quot;青海&quot;,&quot;parent&quot;:&quot;0&quot;});void(0);">青海</a></div><div class="item"><a href="javascript:areaSelectAction.select(&quot;areaSelect_item_1&quot;,64,{&quot;id&quot;:&quot;64&quot;,&quot;name&quot;:&quot;宁夏&quot;,&quot;parent&quot;:&quot;0&quot;});void(0);">宁夏</a></div><div class="item"><a href="javascript:areaSelectAction.select(&quot;areaSelect_item_1&quot;,65,{&quot;id&quot;:&quot;65&quot;,&quot;name&quot;:&quot;新疆&quot;,&quot;parent&quot;:&quot;0&quot;});void(0);">新疆</a></div><div class="item"><a href="javascript:areaSelectAction.select(&quot;areaSelect_item_1&quot;,,);void(0);"></a></div></div></div><div class="areaSearchList" style="position: absolute; display: none;"></div><div class="area_choose"><ul id="" class="area_choose_title clearfix"><li class="active">省份</li><li>城市</li><li>区县</li><li class="btn-cancel">×</li></ul><ul class="area_choose_content"><li class="clearfix"><span data="11">北京</span><span data="12">天津</span><span data="13">河北</span><span data="14">山西</span><span data="15">内蒙古</span><span data="21">辽宁</span><span data="22">吉林</span><span data="23">黑龙江</span><span data="31">上海</span><span data="32">江苏</span><span data="33">浙江</span><span data="34">安徽</span><span data="35">福建</span><span data="36">江西</span><span data="37">山东</span><span data="41">河南</span><span data="42">湖北</span><span data="43">湖南</span><span data="44">广东</span><span data="45">广西</span><span data="46">海南</span><span data="50">重庆</span><span data="51">四川</span><span data="52">贵州</span><span data="53">云南</span><span data="54">西藏</span><span data="61">陕西</span><span data="62">甘肃</span><span data="63">青海</span><span data="64">宁夏</span><span data="65">新疆</span></li><li class="clearfix"></li><li class="clearfix"></li></ul></div>
+<script>
+    // 点击发布查看是否有图片立即发布
+    $("#Immediate_elease").on("click", function() {
+        $("input").filter('#block_prop').filter('#input_prop').trigger("blur");
+
+//              
+        if($("#block_ass_bg").hasClass("block_ass_img_active")){
+             $("#block_prop,#input_prop").css("border-color","#e7e7e7")
+             $("#tip_zrf,#tip_zj").hide();  
+        }
+            
+// 
+                 
+        if($("#Area_mu").val()){
+            if($("#Area_mu").val()>0){
+
+            }else{
+                errorTips("请输入大于0的数字土地面积"); $("#Area_mu")[0].focus(); return false;
+            }
+        }else{errorTips("请输入土地面积"); $("#Area_mu")[0].focus(); return false;}
+        //《《《5-16修改
+        //租金必须为数字
+        if($("#block_prop").val()){
+            if(isFinite($("#block_prop").val())){
+
+            }else{
+                errorTips("请输入数字金额"); $("#block_prop")[0].focus(); return false;
+            }
+        }
+
+        if($("#input_prop").val()){
+            if(isFinite($("#input_prop").val())){
+
+            }else{
+                errorTips("请输入数字金额"); $("#input_prop")[0].focus(); return false;
+            }
+        }
+        // 》》》
+        if($("input[name=remaining_year]").val()){
+            if(isFinite($("input[name=remaining_year]").val())){
+               if($("input[name=remaining_year]").val()>70){
+                    errorTips("年限不能大于70年"); return false;
+               }else if($("input[name=remaining_year]").val()<=0){
+                    errorTips("年限必须大于0"); return false;
+               }
+            }else{
+                errorTips("请输入数字流转年限"); $("input[name=remaining_year]")[0].focus(); return false;
+            }
+        }else{errorTips("请输入流转年限"); $("input[name=remaining_year]")[0].focus(); return false;}
+        //地区判断
+        if($("input[name=region_code]").val().length >= 6){
+
+        }else{errorTips("请最少选择至区县"); $("input[name=remaining_year]")[0].focus(); return false;}
+        
+        //
+        if($("input[name=title]").val()){
+
+        }else{errorTips("请输入信息标题"); $("input[name=title]")[0].focus(); return false;}
+
+        //
+        if(checkargumentbol){errorTips("描述详情中含有敏感词"); return false;}
+        if($("input[name=link_man]").val()){
+            var chineseExg=/^[\u4e00-\u9fa5]{2,100}$/;
+            if(chineseExg.test($("input[name=link_man]").val())){}else{
+                errorTips("请输入两个以上的中文联系人");$("input[name=link_man]")[0].focus(); return false;
+            }
+        }else{errorTips("请输入土地联系人"); $("input[name=link_man]")[0].focus(); return false;}
+        //
+        if($("#mobile").val()){
+            var phoneexg=/^0?(13[0-9]|15[012356789]|17[013678]|18[0-9]|14[57])[0-9]{8}$/;
+            if(phoneexg.test($("#mobile").val())){}else{
+                errorTips("请输入11位数字手机号码");return false;
+            }
+        }else{errorTips("请输入手机号码"); $("#mobile")[0].focus(); return false;}
+        //
+                
+        if ($(".photo_list_img").size() <= 1) {// 可能需要比这个修改为0
+            $(".alert-message-photo").show();
+        }else{
+            $("#supply_form").submit();
+        }
+    });
+   //给页面内容增加提示2017-5-10
+   
+   // 咨询客服
+    $("._zixun").on("click",function(){
+        $("#chatBtn").trigger("click")
+    }) 
+</script>
+
+
+<div class="areaSelect" style="position: absolute; display: none; left: 0px; top: 220px;"><div class="fclose"><a href="javascript:areaSelectAction.close(&#39;areaSelect_item_2&#39;);void(0);"><b>关闭</b></a></div><div class="ftitle"><h4 class="divleft">热点城市</h4></div><hr class="dashed"><div class="fcontent"><div class="item hot"><a href="javascript:areaSelectAction.select(&quot;areaSelect_item_2&quot;,4420,{&quot;name&quot;:&quot;中山&quot;,&quot;id&quot;:&quot;4420&quot;,&quot;parent&quot;:&quot;44&quot;,&quot;type&quot;:&quot;2&quot;});void(0);">中山</a></div><div class="item hot"><a href="javascript:areaSelectAction.select(&quot;areaSelect_item_2&quot;,4407,{&quot;name&quot;:&quot;江门&quot;,&quot;id&quot;:&quot;4407&quot;,&quot;parent&quot;:&quot;44&quot;,&quot;type&quot;:&quot;2&quot;});void(0);">江门</a></div><div class="item hot"><a href="javascript:areaSelectAction.select(&quot;areaSelect_item_2&quot;,4404,{&quot;name&quot;:&quot;珠海&quot;,&quot;id&quot;:&quot;4404&quot;,&quot;parent&quot;:&quot;44&quot;,&quot;type&quot;:&quot;2&quot;});void(0);">珠海</a></div><div class="item hot"><a href="javascript:areaSelectAction.select(&quot;areaSelect_item_2&quot;,4406,{&quot;name&quot;:&quot;佛山&quot;,&quot;id&quot;:&quot;4406&quot;,&quot;parent&quot;:&quot;44&quot;,&quot;type&quot;:&quot;2&quot;});void(0);">佛山</a></div><div class="item hot"><a href="javascript:areaSelectAction.select(&quot;areaSelect_item_2&quot;,4401,{&quot;name&quot;:&quot;广州&quot;,&quot;id&quot;:&quot;4401&quot;,&quot;parent&quot;:&quot;44&quot;,&quot;type&quot;:&quot;2&quot;});void(0);">广州</a></div><div class="item hot"><a href="javascript:areaSelectAction.select(&quot;areaSelect_item_2&quot;,4402,{&quot;name&quot;:&quot;肇庆&quot;,&quot;id&quot;:&quot;4402&quot;,&quot;parent&quot;:&quot;44&quot;,&quot;type&quot;:&quot;2&quot;});void(0);">肇庆</a></div><div class="item hot"><a href="javascript:areaSelectAction.select(&quot;areaSelect_item_2&quot;,4418,{&quot;name&quot;:&quot;清远&quot;,&quot;id&quot;:&quot;4418&quot;,&quot;parent&quot;:&quot;44&quot;,&quot;type&quot;:&quot;2&quot;});void(0);">清远</a></div><div class="item hot"><a href="javascript:areaSelectAction.select(&quot;areaSelect_item_2&quot;,4413,{&quot;name&quot;:&quot;惠州&quot;,&quot;id&quot;:&quot;4413&quot;,&quot;parent&quot;:&quot;44&quot;,&quot;type&quot;:&quot;2&quot;});void(0);">惠州</a></div></div><div class="ftitle hidden"><h6 class="divleft">地区快速筛选：</h6><input type="text" class="text middletxt" onkeyup="areaSelectAction.drawSearchList(&quot;areaSelect_item_2&quot;,this)"></div><hr class="dashed"><div class="ftitle"><span><span><a href="javascript:areaSelectAction.select(&quot;areaSelect_item_2&quot;,0,{&quot;name&quot;:&quot;全国&quot;,&quot;id&quot;:&quot;0&quot;,&quot;subdomain&quot;:&quot;www&quot;});void(0);">全国</a></span> &gt; <span><a href="javascript:areaSelectAction.select(&quot;areaSelect_item_2&quot;,44,{&quot;id&quot;:&quot;44&quot;,&quot;name&quot;:&quot;广东&quot;,&quot;parent&quot;:&quot;0&quot;});void(0);">广东</a></span> &gt; <span><a href="javascript:areaSelectAction.select(&quot;areaSelect_item_2&quot;,,);void(0);"></a></span> &gt; </span><a href="javascript:areaSelectAction.select(&quot;areaSelect_item_2&quot;,0,{&quot;name&quot;:&quot;全国&quot;,&quot;id&quot;:&quot;0&quot;,&quot;subdomain&quot;:&quot;www&quot;});void(0);"> 返回上一级</a></div><div class="fcontent"><div class="item"><a href="javascript:areaSelectAction.select(&quot;areaSelect_item_2&quot;,4401,{&quot;id&quot;:&quot;4401&quot;,&quot;name&quot;:&quot;广州&quot;,&quot;parent&quot;:&quot;44&quot;});void(0);">广州</a></div><div class="item"><a href="javascript:areaSelectAction.select(&quot;areaSelect_item_2&quot;,4402,{&quot;id&quot;:&quot;4402&quot;,&quot;name&quot;:&quot;韶关&quot;,&quot;parent&quot;:&quot;44&quot;});void(0);">韶关</a></div><div class="item"><a href="javascript:areaSelectAction.select(&quot;areaSelect_item_2&quot;,4403,{&quot;id&quot;:&quot;4403&quot;,&quot;name&quot;:&quot;深圳&quot;,&quot;parent&quot;:&quot;44&quot;});void(0);">深圳</a></div><div class="item"><a href="javascript:areaSelectAction.select(&quot;areaSelect_item_2&quot;,4404,{&quot;id&quot;:&quot;4404&quot;,&quot;name&quot;:&quot;珠海&quot;,&quot;parent&quot;:&quot;44&quot;});void(0);">珠海</a></div><div class="item"><a href="javascript:areaSelectAction.select(&quot;areaSelect_item_2&quot;,4405,{&quot;id&quot;:&quot;4405&quot;,&quot;name&quot;:&quot;汕头&quot;,&quot;parent&quot;:&quot;44&quot;});void(0);">汕头</a></div><div class="item"><a href="javascript:areaSelectAction.select(&quot;areaSelect_item_2&quot;,4406,{&quot;id&quot;:&quot;4406&quot;,&quot;name&quot;:&quot;佛山&quot;,&quot;parent&quot;:&quot;44&quot;});void(0);">佛山</a></div><div class="item"><a href="javascript:areaSelectAction.select(&quot;areaSelect_item_2&quot;,4407,{&quot;id&quot;:&quot;4407&quot;,&quot;name&quot;:&quot;江门&quot;,&quot;parent&quot;:&quot;44&quot;});void(0);">江门</a></div><div class="item"><a href="javascript:areaSelectAction.select(&quot;areaSelect_item_2&quot;,4408,{&quot;id&quot;:&quot;4408&quot;,&quot;name&quot;:&quot;湛江&quot;,&quot;parent&quot;:&quot;44&quot;});void(0);">湛江</a></div><div class="item"><a href="javascript:areaSelectAction.select(&quot;areaSelect_item_2&quot;,4409,{&quot;id&quot;:&quot;4409&quot;,&quot;name&quot;:&quot;茂名&quot;,&quot;parent&quot;:&quot;44&quot;});void(0);">茂名</a></div><div class="item"><a href="javascript:areaSelectAction.select(&quot;areaSelect_item_2&quot;,4412,{&quot;id&quot;:&quot;4412&quot;,&quot;name&quot;:&quot;肇庆&quot;,&quot;parent&quot;:&quot;44&quot;});void(0);">肇庆</a></div><div class="item"><a href="javascript:areaSelectAction.select(&quot;areaSelect_item_2&quot;,4413,{&quot;id&quot;:&quot;4413&quot;,&quot;name&quot;:&quot;惠州&quot;,&quot;parent&quot;:&quot;44&quot;});void(0);">惠州</a></div><div class="item"><a href="javascript:areaSelectAction.select(&quot;areaSelect_item_2&quot;,4414,{&quot;id&quot;:&quot;4414&quot;,&quot;name&quot;:&quot;梅州&quot;,&quot;parent&quot;:&quot;44&quot;});void(0);">梅州</a></div><div class="item"><a href="javascript:areaSelectAction.select(&quot;areaSelect_item_2&quot;,4415,{&quot;id&quot;:&quot;4415&quot;,&quot;name&quot;:&quot;汕尾&quot;,&quot;parent&quot;:&quot;44&quot;});void(0);">汕尾</a></div><div class="item"><a href="javascript:areaSelectAction.select(&quot;areaSelect_item_2&quot;,4416,{&quot;id&quot;:&quot;4416&quot;,&quot;name&quot;:&quot;河源&quot;,&quot;parent&quot;:&quot;44&quot;});void(0);">河源</a></div><div class="item"><a href="javascript:areaSelectAction.select(&quot;areaSelect_item_2&quot;,4417,{&quot;id&quot;:&quot;4417&quot;,&quot;name&quot;:&quot;阳江&quot;,&quot;parent&quot;:&quot;44&quot;});void(0);">阳江</a></div><div class="item"><a href="javascript:areaSelectAction.select(&quot;areaSelect_item_2&quot;,4418,{&quot;id&quot;:&quot;4418&quot;,&quot;name&quot;:&quot;清远&quot;,&quot;parent&quot;:&quot;44&quot;});void(0);">清远</a></div><div class="item"><a href="javascript:areaSelectAction.select(&quot;areaSelect_item_2&quot;,4419,{&quot;id&quot;:&quot;4419&quot;,&quot;name&quot;:&quot;东莞&quot;,&quot;parent&quot;:&quot;44&quot;});void(0);">东莞</a></div><div class="item"><a href="javascript:areaSelectAction.select(&quot;areaSelect_item_2&quot;,4420,{&quot;id&quot;:&quot;4420&quot;,&quot;name&quot;:&quot;中山&quot;,&quot;parent&quot;:&quot;44&quot;});void(0);">中山</a></div><div class="item"><a href="javascript:areaSelectAction.select(&quot;areaSelect_item_2&quot;,4451,{&quot;id&quot;:&quot;4451&quot;,&quot;name&quot;:&quot;潮州&quot;,&quot;parent&quot;:&quot;44&quot;});void(0);">潮州</a></div><div class="item"><a href="javascript:areaSelectAction.select(&quot;areaSelect_item_2&quot;,4452,{&quot;id&quot;:&quot;4452&quot;,&quot;name&quot;:&quot;揭阳&quot;,&quot;parent&quot;:&quot;44&quot;});void(0);">揭阳</a></div><div class="item"><a href="javascript:areaSelectAction.select(&quot;areaSelect_item_2&quot;,4453,{&quot;id&quot;:&quot;4453&quot;,&quot;name&quot;:&quot;云浮&quot;,&quot;parent&quot;:&quot;44&quot;});void(0);">云浮</a></div><div class="item"><a href="javascript:areaSelectAction.select(&quot;areaSelect_item_2&quot;,,);void(0);"></a></div></div></div><div class="areaSearchList" style="position: absolute; display: none;"></div><script type="text/javascript" src="__STATIC__/js/service"></script></body></html>
